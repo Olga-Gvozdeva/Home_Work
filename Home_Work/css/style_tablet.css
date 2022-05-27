@@ -1,0 +1,121 @@
+﻿@media screen and (max-width: 1200px) {
+    
+    
+      header {
+          height: 768px;
+          padding-top: 34px;
+          box-sizing: border-box;
+          width: 100%;
+          flex: none;
+          background: linear-gradient(0deg, #EBF3FB 0%, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+      }
+      header .container{
+          width: 704px;
+      }
+      header .container:first-child{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 32px;
+        box-sizing: border-box;
+    }
+     
+      header .container:last-child{
+          padding-top: 112px;
+          background-position: right;
+          background-size: 336px 292px;
+          background-position-y: 65%;
+
+      }
+      header .container:last-child div{
+          width: 510px;
+      }
+      
+      header .container p{
+          width: 368px;
+      
+      }
+      
+      main {
+          width: 704px;
+      }
+      
+      .main__container__one{
+          margin: 64px 20px 32px;
+          justify-content: center;
+      }
+      .main__block{
+          width: 336px;
+          height: 457px;
+          padding: 40px 30px;
+          margin-bottom: 32px;
+      }
+      .one{
+          background-image: url(../img/left-img.png);
+      }
+      .two{
+          background-image: url(../img/center-img.png);   
+      }
+      .three{
+          background-image: url(../img/right-img.png);
+      }
+        
+      .main__container__two{
+          width: 704px;
+          grid-template-rows: max-content max-content 297px 253px;
+          margin-top: 32px;
+
+      }
+
+      .main__container__two p{
+          width: 520px;
+      }
+      .main__container__two .top{
+          height: 297px;
+          background-size: contain;
+
+      }
+      .main__container__two .left{
+          height: 253px;
+          padding: 20px;
+          background-size: contain;
+
+      }
+      .main__container__two .right{
+        height: 253px;
+        padding: 20px;
+        background-size: contain;
+
+      }
+      
+      footer .container {
+        padding: 47px 0px;
+        box-sizing: border-box;
+        width: 704px;
+    }
+    footer h3 {
+        margin: -16px 0 32px;
+    }
+    footer p {
+        width: 336px;
+        margin: 0;
+    }
+    footer button {
+        margin-top: -115px;
+        width: 134px;
+        height: 32px;
+    }
+
+    footer ol {
+        display: block;
+    }
+    footer li {
+        padding-left: 59px;
+    }
+    footer li + li {
+        margin-top: 26px;
+    }
+    footer li br {
+        display: none;
+    }
+    
+}     
