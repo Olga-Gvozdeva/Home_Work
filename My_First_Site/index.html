@@ -4,10 +4,11 @@
       <title>22.04.2022 forma</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
+      <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
       <body>
           <header>
-              <div class="header_container">
+        <div class="header_container">
         <div class="logo"></div>
         <input type="text" name="search" list="seachteam" placeholder="Seach store">
         <div class="right_menu">
@@ -16,7 +17,14 @@
                 <a href="#">manufacturing</a>
                 <a href="#">packaging</a>
                 <a href='#' class="basket"></a>
-                <a href='#' class="person"></a>
+                <a href='#' class="person popup-open"></a>
+                <div class="popup-fade">
+                    <div class="popup">
+                        <form class="popup-form">
+                        </form>
+                        <a class="popup-close" href="#">Close</a>
+                    </div>		
+                </div>
         </div>
               </div>
           </header>
@@ -49,11 +57,39 @@
               <div class="left_bottom_buy_two"></div>
               <div class="right_bottom_info_one"></div>
               <div class="right_bottom_info_two"></div>-->
-              </div>
           </main>
+
+          <script>
+$(document).ready(function($) {
+	$('.popup-open').click(function() {
+		$('.popup-fade').fadeIn();
+		return false;
+	});	
+	
+	$('.popup-close').click(function() {
+		$(this).parents('.popup-fade').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.popup-fade').fadeOut();
+		}
+	});
+	
+	$('.popup-fade').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});
+            </script>
+
           <footer>
               <div class="ft"></div>
           </footer>
+          </div>
       </body>
   </html>
 
