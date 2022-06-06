@@ -21,8 +21,7 @@ html, body, body div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, font, img, 
     list-style: none;
 
 }
-    
-    
+       
 html * {
     max-height: 1000000px;
 }
@@ -111,6 +110,12 @@ header input[type='text']::placeholder{
     box-sizing: border-box;
 }
 
+.basket, .person{
+    background-repeat: no-repeat;
+    width:24px;
+    height:24px;
+}
+
 .popup-fade {
 	display: none;
 }
@@ -147,11 +152,30 @@ header input[type='text']::placeholder{
 
 }
 
-.basket, .person{
-    background-repeat: no-repeat;
-    width:24px;
-    height:24px;
+.right_top_buy_one, .right_top_buy_two{
+    position: relative;
 }
+
+.dot{
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 5px white;
+}
+
+.dot:hover{
+    cursor: pointer;
+}
+
+.right_top_buy_two .dot{
+    top: 220px;
+    left: 40px;
+}
+
 
 main{
     width: 1140px;
