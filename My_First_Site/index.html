@@ -4,33 +4,45 @@
       <title>22.04.2022 forma</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
+      <link rel="stylesheet" href="CSS/style_tablet.css">  
       <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
       <body>
           <header>
-        <div class="header_container">
-        <div class="logo"></div>
-        <input type="text" name="search" list="seachteam" placeholder="Seach store">
-        <div class="right_menu">
-                <a href="#">products</a>
-                <a href="#">story</a>
-                <a href="#">manufacturing</a>
-                <a href="#">packaging</a>
-                <a href='#' class="basket"></a>
-                <a href='#' class="person popup-open"></a>
-                <div class="popup-fade">
-                    <div class="popup">
-                        <form class="popup-form">
-                        </form>
-                        <a class="popup-close" href="#">Close</a>
-                    </div>		
-                </div>
-        </div>
-              </div>
+            <div class="header_container">
+            <section>
+                <nav class="left_menu">
+                    <div class="logo"></div>
+                    <nav class='dropdownMenu'>
+                        <h2>Explore</h2>
+                        <a href="#">New In</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Accessories</a>
+                    </nav>
+                    <input type="text" name="search" list="seachteam" placeholder="Seach store">
+                </nav>
+            </section>
+            <section>            
+                <nav class="right_menu">
+                    <a href="#">products</a>
+                    <a href="#">store</a>
+                    <a href='#' class="basket"></a>
+                    <a href='#' class="person popup-open"></a>
+                    <div class="popup-fade">
+                        <div class="popup">
+                            <form class="popup-form">
+                            </form>
+                            <a class="popup-close" href="#">Close</a>
+                        </div>		
+                    </div>
+                </nav>
+            </section>
+            </div>
           </header>
-          <main>
+          <!--<main>
               <div class="main_content">
-              <nav>
+              <nav class='dropdownMenu'>
                   <h2>Explore</h2>
                   <a href="#">New In</a>
                   <a href="#">Clothing</a>
@@ -53,13 +65,21 @@
               </div>
               <div class="right_top_buy_one"></div>
               <div class="right_top_buy_two"></div>
-<!--          <div class="left_bottom_buy_one"></div>
+              <div class="left_bottom_buy_one"></div>
               <div class="left_bottom_buy_two"></div>
               <div class="right_bottom_info_one"></div>
-              <div class="right_bottom_info_two"></div>-->
-          </main>
+              <div class="right_bottom_info_two"></div>
+          </main>-->
 
           <script>
+        
+            let button = document.querySelector('.logo');
+            let elem = document.querySelector('.dropdownMenu');
+
+            button.addEventListener('click', function() {
+                elem.classList.toggle('active');
+            });
+
 $(document).ready(function($) {
 	$('.popup-open').click(function() {
 		$('.popup-fade').fadeIn();

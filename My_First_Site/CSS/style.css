@@ -19,6 +19,7 @@ html, body, body div, span, label, h1, h2, h3, h4, h5, h6, p, a, em, font, img, 
     outline: none;
     background: none;
     list-style: none;
+    text-decoration: none;
 
 }
        
@@ -39,30 +40,58 @@ body {
 }
 
 header{
-width: 100%;
-background-color: rgb(248, 242, 234);
-box-shadow: 5px 10px 20px #b5af86;
+    width: 100%;
+    background-color: rgb(248, 242, 234);
+    box-shadow: 5px 10px 20px #b5af86;
 
 }
 
 .header_container{
     display: flex;
     flex-flow: row nowrap;
-    padding: 0 20px;
+    padding: 0 100px;
     box-sizing: border-box;
     margin: 6px auto 6px;
     height: 65px;
-    width: 1100px;
+    width: 100%;
     align-items: center;
+    justify-content: space-between;
+}
+
+.left_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+    height: 44px;
 }
 
 header .logo{
     width: 93px;
-    height: 44px;
     background-image: url(../Img/logo.png);
     background-repeat: no-repeat;
     background-position: center left;
-    margin-right: 140px;
+}
+
+.dropdownMenu{
+    position: fixed;
+    top: 150px;
+    flex-direction: column;
+    height: 340px;
+    display: flex;
+    justify-content: space-evenly
+
+    
+}
+
+.dropdownMenu h2{
+    margin-bottom: 30px;
+}
+
+.dropdownMenu a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 15px;
 }
     
 header input[type="text"]{
@@ -75,6 +104,7 @@ header input[type="text"]{
     box-sizing: border-box;
     width: 270px;
     font-size: 17px;
+
     
 }
 header input[type="text"]:focus, input[type="text"]:active, input[type="text"]:hover{
@@ -89,13 +119,13 @@ header input[type='text']::placeholder{
 }
 
 .right_menu{
-    width: 680px;
+    width: 290px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .right_menu a{
-    text-decoration: none;
     font-size: 17px;
     font-weight: 700;
     color: #000000;
@@ -151,6 +181,8 @@ header input[type='text']::placeholder{
 	position: absolute;
 
 }
+
+/*
 
 .right_top_buy_one, .right_top_buy_two{
     position: relative;
@@ -214,24 +246,6 @@ main{
     box-shadow: 5px 10px 20px #b5af86;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    height: 420px;
-    grid-area: n;
-    
-}
-
-nav h2{
-    margin-bottom: 30px;
-}
-
-nav a{
-    text-decoration: none;
-    font-size: 20px;
-    color: #000000;
-    padding-bottom: 15px;
-}
 
 .left_top_sale_one, .left_top_sale_two{
     display: flex;
@@ -322,3 +336,5 @@ nav a{
     height: 1000px;
     background-color: bisque;
 }
+
+*/
