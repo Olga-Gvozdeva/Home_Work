@@ -73,12 +73,12 @@ header .logo{
 }
 
 .dropdownMenu{
-    position: fixed;
-    top: 150px;
+    position: absolute;
+    top: 130px;
     flex-direction: column;
-    height: 340px;
+    height: 320px;
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-between;
 
     
 }
@@ -182,9 +182,8 @@ header input[type='text']::placeholder{
 
 }
 
-/*
 
-.right_top_buy_one, .right_top_buy_two{
+.right_one, .right_two{
     position: relative;
 }
 
@@ -203,69 +202,60 @@ header input[type='text']::placeholder{
     cursor: pointer;
 }
 
-.right_top_buy_two .dot{
+.right_two .dot{
     top: 220px;
     left: 40px;
 }
 
 
 main{
-    width: 1140px;
-    height: 850px;
+    width: 100%;
+    height: 100%;
     margin: 50px auto;
-    padding: 40px 0;
 
 }
 
 .main_content{
-    padding: 0 20px;
+    padding: 5px 20px 20px 20px;
     box-sizing: border-box;
     display: grid;
-    height: 100%;
-    width: 1100px;
-    margin: 0 auto;
+    height: 530px;
+    width: 895px;
+    margin-left: 290px;
     gap: 20px;
     grid-template-areas: 
-    "n lto lto rto rtt"
-    "n ltt ltt rto rtt";
+    "lto rto rtt"
+    "ltt rto rtt";
     
 }
 
-.left_top_sale_one, .left_top_sale_two{
-    height: 255px;
-    background-color: azure;
-    border-radius: 10px;
-    box-shadow: 5px 10px 20px #b5af86;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.right_top_buy_one, .right_top_buy_two{
-    height: 530px;
-    background-color: aqua;
-    border-radius: 10px;
-    box-shadow: 5px 10px 20px #b5af86;
-}
-
-
-.left_top_sale_one, .left_top_sale_two{
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.left_top_sale_one{
+.left_one{
     grid-area: lto;
     background-image: url(../Img/saledress.png);
-    background-size:cover;
+    background-size: contain;
+    border-radius: 5px;
+}
+.left_two{
+    grid-area: ltt;
+}
+.left_one, .left_two{
+    width: 2fr;
+    height: 1fr;
+}
+.right_one{
+    grid-area: rto;
+    background-image: url(../Img/odezda_vert.jpg);
+}
+.right_two{
+    grid-area: rtt;
+    background-image: url(../Img/odezda_vert2.jpg);
+}
+.right_one, .right_two{
+    width: 1fr;
+    height: 2fr;
 }
 
-.left_top_sale_one a{
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 400;
-}
+
 
 .heard_btn{
     display: inline-block;
@@ -299,36 +289,6 @@ main{
     background-image: none;
  }
  
-.left_top_sale_two{
-    grid-area: ltt;
-    background-image: url(../Img/bottom.png);
-    background-size: 100%;
-
-}
-
-.left_top_sale_two a{
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 400;
-    align-self: flex-start;
-}
-.right_top_buy_one{
-    grid-area: rto;
-    background-image: url(../Img/aest.jpg);
-    background-size: cover;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-}
-.right_top_buy_two{
-    grid-area: rtt;
-    background-image: url(../Img/sveter.jpg);
-    background-size: cover;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-}
-
-
 .ft{
     display: flex;
     margin-top: 20px;
@@ -337,4 +297,3 @@ main{
     background-color: bisque;
 }
 
-*/
