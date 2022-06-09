@@ -5,6 +5,7 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
+      <link rel="stylesheet" href="CSS/style_bigsize.css"> 
       <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
       <body>
@@ -13,20 +14,20 @@
             <section>
                 <nav class="left_menu">
                     <div class="logo"></div>
-                    <nav class='dropdownMenu'>
+                    <!--<nav class='dropdownMenu'>
                         <h2>Explore</h2>
                         <a href="#">New In</a>
                         <a href="#">Clothing</a>
                         <a href="#">Shoes</a>
                         <a href="#">Accessories</a>
-                    </nav>
+                    </nav>-->
                     <input type="text" name="search" list="seachteam" placeholder="Seach store">
                 </nav>
             </section>
             <section>            
                 <nav class="right_menu">
-                    <a href="#">products</a>
-                    <a href="#">store</a>
+                    <a href="products.html">products</a>
+                    <a href="store.html">store</a>
                     <a href='#' class="basket"></a>
                     <a href='#' class="person popup-open"></a>
                     <div class="popup-fade">
@@ -42,38 +43,79 @@
           </header>
           <main>
             <div class="main_content">
-              <div class="left_one">
+            <nav class='dropdownMenu'>
+                <h2>Explore</h2>
+                <a href="#">New In</a>
+                <a href="#">Clothing</a>
+                <a href="#">Shoes</a>
+                <a href="#">Accessories</a>
+                </nav>
+            <div class="left_one">
                 <form>
                     <input type="checkbox" name="heart" id="heard">
                     <label for="heard" class="heard_btn"></label>
                 </form>
               <a href="#">Fashion Week Paris</a>
-              </div>
-              <div class="left_two">
+            </div>
+            <div class="left_two">
                 <form>
                     <input type="checkbox" name="heart2" id="heard2">
                     <label for="heard2" class="heard_btn"></label>
-              </form>
-              <a href="#">Summer Sale</a>
-              </div>
-              <div class="right_one"></div>
-              <div class="right_two"></div>
+                </form>
+            <a href="#">Summer Sale</a>
+            </div>
+            <div class="right_one"></div>
+            <div class="right_two"></div>
               <!--<div class="left_bottom_buy_one"></div>
               <div class="left_bottom_buy_two"></div>
               <div class="right_bottom_info_one"></div>
               <div class="right_bottom_info_two"></div>-->
           </main>
 
+          <footer>
+            <section>
+              <div class="footer_content">
+                  <nav class="container help">
+                      <h3>Help</h3>
+                      <a href="#">Delivery & returns</a>
+                      <a href="#">Contacts</a>
+                  </nav>
+                  <nav class="container shop">
+                      <h3>Shop</h3>
+                      <a href="#">New arrivals</a>
+                      <a href="#">Sales</a>
+                  </nav>
+                  <nav class="container touch">
+                      <h3>Get in touch</h3>
+                      <p class="call">(405) 555-0128</p>
+                      <p class="email">hello@createx.com</p>
+                      <div class="media">
+                        <a href="#" class="fb"></a>
+                        <a href="#" class="inst"></a>
+                        <a href="#" class="youtube"></a>
+                      </div>
+                  </nav>
+              </div>
+            </section>
+
+            <section>
+                <div class="footerBottom">
+                    <p class="rightReserved"><span class="fst">All rights reserved. Made with</span><span class="scd">by OlgaGvozdeva<span></p>
+                    <a class="goTop" href="#">Go to top</a>
+                </div>
+            </section>
+          </footer>
+
+
           <script>
         
-            let button = document.querySelector('.logo');
-            let elem = document.querySelector('.dropdownMenu');
+    let button = document.querySelector('.logo');
+    let elem = document.querySelector('.dropdownMenu');
+    button.addEventListener('click', function() {
+        elem.classList.toggle('active');
+    });
 
-            button.addEventListener('click', function() {
-                elem.classList.toggle('active');
-            });
-
-$(document).ready(function($) {
+    $(document).ready(function($) {
 	$('.popup-open').click(function() {
 		$('.popup-fade').fadeIn();
 		return false;
@@ -97,12 +139,7 @@ $(document).ready(function($) {
 		}
 	});
 });
-            </script>
-
-          <footer>
-              <div class="ft"></div>
-          </footer>
-          </div>
+            </script>  
       </body>
   </html>
 

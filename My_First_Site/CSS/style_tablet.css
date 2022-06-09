@@ -5,21 +5,20 @@
 }
 
 .dropdownMenu{
-    position: fixed;
-    top: 100px;
-    flex-direction: column;
-    height: 380px;
-    width: 180px;
     display: none;
     
 }
 .dropdownMenu.active{
+    height: 380px;
+    width: 180px;
+    position: absolute;
+    top: 70px;
     display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 10px;
-    border: 1px solid black;
     padding-left: 20px;
     justify-content: space-evenly;
+    background-color: rgb(248, 242, 234);
+    box-shadow: 8px 8px 6px -6px #b5af86;
+    margin-left: -105px;
 }
 
 header .logo{
@@ -37,4 +36,36 @@ header .logo{
     height: 34px;
 }
 
+main{
+    height: 1200px;
+
+}
+
+.main_content{
+    padding: 20px 100px;
+    box-sizing: border-box;
+    display: grid;
+    align-content: stretch;
+    grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
+    grid-template-rows: minmax(220px, 280px) minmax(220px, 280px) minmax(390px, 490px);
+    justify-content: center;
+    height: 1135px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-areas: 
+    "lto lto"
+    "ltt ltt"
+    "rto rtt";
+    
+}
+
+.footer_content, .footerBottom{
+    padding: 0 40px;
+}
+
+.footer_content section:first-of-type{
+    flex-flow: row wrap;
+    height: 270px;
+
+}
 }

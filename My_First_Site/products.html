@@ -1,36 +1,116 @@
 <!DOCTYPE html>
    <html lang="ru">
    <head>
-      <title>Cape</title>
+      <title>22.04.2022 forma</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
+      <link rel="stylesheet" href="CSS/style_tablet.css">  
+      <link rel="stylesheet" href="CSS/style_bigsize.css"> 
       <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
       <body>
           <header>
-        <div class="header_container">
-        <a href="index.html" class="logo"></a>
-        <input type="text" name="search" list="seachteam" placeholder="Seach products">
-        <div class="right_menu">
-                <a href="#">products</a>
-                <a href="store.html">store</a>
-                <a href="#">manufacturing</a>
-                <a href="#">packaging</a>
-                <a href='#' class="basket"></a>
-                <a href='#' class="person popup-open"></a>
-                <div class="popup-fade">
-                    <div class="popup">
-                        <form class="popup-form">
-                        </form>
-                        <a class="popup-close" href="#">Close</a>
-                    </div>		
-                </div>
-        </div>
-              </div>
+            <div class="header_container">
+            <section>
+                <nav class="left_menu">
+                    <div class="logo"></div>
+                    <!--<nav class='dropdownMenu'>
+                        <h2>Explore</h2>
+                        <a href="#">New In</a>
+                        <a href="#">Clothing</a>
+                        <a href="#">Shoes</a>
+                        <a href="#">Accessories</a>
+                    </nav>-->
+                    <input type="text" name="search" list="seachteam" placeholder="Seach store">
+                </nav>
+            </section>
+            <section>            
+                <nav class="right_menu">
+                    <a href="products.html">products</a>
+                    <a href="store.html">store</a>
+                    <a href='#' class="basket"></a>
+                    <a href='#' class="person popup-open"></a>
+                    <div class="popup-fade">
+                        <div class="popup">
+                            <form class="popup-form">
+                            </form>
+                            <a class="popup-close" href="#">Close</a>
+                        </div>		
+                    </div>
+                </nav>
+            </section>
+            </div>
           </header>
           <main>
+            
           </main>
+
           <footer>
+              <div class="footer_content">
+                  <section>
+                  <nav class="container help">
+                      <h3>Help</h3>
+                      <a href="#">Delivery & returns</a>
+                      <a href="#">Contacts</a>
+                  </nav>
+                  <nav class="container shop">
+                      <h3>Shop</h3>
+                      <a href="#">New arrivals</a>
+                      <a href="#">Sales</a>
+                  </nav>
+                  <nav class="container touch">
+                      <h3>Get in touch</h3>
+                      <p class="call">(405) 555-0128</p>
+                      <p class="email">hello@createx.com</p>
+                      <div class="media">
+                        <a href="#" class="fb"></a>
+                        <a href="#" class="inst"></a>
+                        <a href="#" class="youtube"></a>
+                      </div>
+                  </nav>
+                  </section>
+                  <hr>
+                  <section>
+                    <p class="rightReserved"><span class="fst">All rights reserved. Made with</span><span class="scd">by OlgaGvozdeva</span></p>
+                    <a class="goTop" href="#">Go to top</a>
+                  </section>
+              </div>
           </footer>
+
+
+          <script>
+        
+    let button = document.querySelector('.logo');
+    let elem = document.querySelector('.dropdownMenu');
+    button.addEventListener('click', function() {
+        elem.classList.toggle('active');
+    });
+
+    $(document).ready(function($) {
+	$('.popup-open').click(function() {
+		$('.popup-fade').fadeIn();
+		return false;
+	});	
+	
+	$('.popup-close').click(function() {
+		$(this).parents('.popup-fade').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.popup-fade').fadeOut();
+		}
+	});
+	
+	$('.popup-fade').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});
+            </script>  
       </body>
-   </html>
+  </html>
+

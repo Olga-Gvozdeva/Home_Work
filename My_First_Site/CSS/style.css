@@ -27,16 +27,20 @@ html * {
     max-height: 1000000px;
 }
    
-html {
+html,  body {
     height: 100%;
 }
 
 body {
     font: normal 400 16px / 26px 'Caviardreams', 'Helvetica', sans-serif;
     letter-spacing: 0.05em;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+}
+
+a{
+    color: black;
 }
 
 header{
@@ -72,28 +76,6 @@ header .logo{
     background-position: center left;
 }
 
-.dropdownMenu{
-    position: absolute;
-    top: 130px;
-    flex-direction: column;
-    height: 320px;
-    display: flex;
-    justify-content: space-between;
-
-    
-}
-
-.dropdownMenu h2{
-    margin-bottom: 30px;
-}
-
-.dropdownMenu a{
-    text-decoration: none;
-    font-size: 20px;
-    color: #000000;
-    padding-bottom: 15px;
-}
-    
 header input[type="text"]{
     border: none;
     background-image: url(../Img/Union.png);
@@ -210,49 +192,72 @@ header input[type='text']::placeholder{
 
 main{
     width: 100%;
-    height: 100%;
     margin: 50px auto;
+    flex: 1 0 auto;
 
 }
 
 .main_content{
-    padding: 5px 20px 20px 20px;
+    padding: 20px 100px;
     box-sizing: border-box;
     display: grid;
-    height: 530px;
-    width: 895px;
-    margin-left: 290px;
+    grid-template-columns: minmax(200px, 250px) minmax(350px, 450px) minmax(170px, 200px) minmax(170px, 200px);
+    grid-template-rows: minmax(220px, 280px) minmax(220px, 280px);
+    width: 100%;
+    margin: 0 auto;
     gap: 20px;
+    justify-content: space-between;
     grid-template-areas: 
-    "lto rto rtt"
-    "ltt rto rtt";
+    "n lto rto rtt"
+    "n ltt rto rtt";
     
+}
+
+.dropdownMenu{
+    grid-area: n;
+    flex-direction: column;
+    height: 320px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dropdownMenu h2{
+    margin-bottom: 30px;
+}
+
+.dropdownMenu a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000000;
+    padding-bottom: 15px;
 }
 
 .left_one{
     grid-area: lto;
     background-image: url(../Img/saledress.png);
-    background-size: contain;
-    border-radius: 5px;
+    background-size: cover;
 }
+
 .left_two{
     grid-area: ltt;
+    background-image: url(../Img/dance.png);
+    background-size: cover;
 }
 .left_one, .left_two{
-    width: 2fr;
-    height: 1fr;
+    border-radius: 5px;
 }
 .right_one{
     grid-area: rto;
-    background-image: url(../Img/odezda_vert.jpg);
+    background-image: url(../Img/aest.jpg);
 }
 .right_two{
     grid-area: rtt;
-    background-image: url(../Img/odezda_vert2.jpg);
+    background-image: url(../Img/sveter.jpg);
 }
 .right_one, .right_two{
-    width: 1fr;
-    height: 2fr;
+    border-radius: 5px;
+    background-size: cover;
 }
 
 
@@ -289,11 +294,109 @@ main{
     background-image: none;
  }
  
-.ft{
-    display: flex;
-    margin-top: 20px;
+footer{
     width: 100%;
-    height: 1000px;
-    background-color: bisque;
+    background-color: rgb(248, 242, 234);
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+}
+
+.footer_content{
+    font-weight: 700;
+    display: flex;
+    padding: 0 100px;
+    flex-flow: row nowrap;
+    height: 220px;
+    justify-content: flex-start;
+}
+
+.footer_content .container{
+    width: 250px;
+    height: 190px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.container h3{
+    margin-bottom: 10px;
+}
+
+.call::before{
+    content: 'Call:';
+    margin-right: 3px;
+}
+.email::before{
+    content: 'Email:';
+    margin-right: 3px;
+}
+
+h3 ~ a, h3 ~ p{
+    opacity: 0.7;
+    line-height: 2em;
+}
+
+.media{
+    width: 130px;
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+.media a{
+    width: 35px;
+    height: 35px;
+}
+
+.fb, .inst, .youtube{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fb{
+    background-image: url(../Img/facebook.png);
+}
+
+.inst{
+    background-image: url(../Img/instagramm.png);
+}
+.youtube{
+    background-image: url(../Img/youtube.png);
+}
+
+
+.footerBottom{
+    padding: 0 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightReserved, .goTop{
+    width: max-content;
+}
+
+.goTop{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+.rightReserved::before{
+    content: '\00A9';
+    margin-right: 3px;
+}
+
+.scd::before{
+    content: '\2661';
+    padding: 0 3px;
 }
 
