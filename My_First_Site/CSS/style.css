@@ -233,6 +233,9 @@ main{
     padding-bottom: 15px;
 }
 
+.hiddenDrop{
+    display: none;
+}
 .left_one{
     grid-area: lto;
     background-image: url(../Img/saledress.png);
@@ -293,6 +296,61 @@ main{
  #heard:active ~ .heard_btn, #heard2:active ~ .heard_btn {
     background-image: none;
  }
+
+ .store_content{
+    padding: 20px 100px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(200px, 250px) minmax(200px, 250px) minmax(200px, 250px) minmax(200px, 250px);
+    grid-template-rows: minmax(200px, 250px) minmax(200px, 250px) minmax(150px, 220px) minmax(150px, 220px);
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    justify-content: space-between;
+    grid-template-areas: 
+    "sh sh mp mp"
+    "sh sh mp mp"
+    "dd dd dd dd"
+    "rt rt rt rt";
+    
+}
+
+.shops{
+    grid-area: sh;
+    background-color: #b5af86;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main_shop, .second_shop{
+    height: 100%;
+    display: flex;
+}
+.main_shop{
+    background-color: antiquewhite;
+}
+
+.second_shop{
+    background-color: azure;
+    margin: 0 auto;
+}
+
+.map_shops{
+    grid-area: mp;
+    background-color: aqua;
+}
+
+.delivery{
+    grid-area: dd;
+    background-color: #E06000;
+}
+
+.returns{
+    grid-area: rt;
+    background-color: chartreuse;
+}
+
  
 footer{
     width: 100%;
@@ -400,3 +458,6 @@ h3 ~ a, h3 ~ p{
     padding: 0 3px;
 }
 
+hr{
+    width: 100%;
+}

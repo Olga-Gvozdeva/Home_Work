@@ -8,7 +8,7 @@
     display: none;
     
 }
-.dropdownMenu.active{
+.active{
     height: 380px;
     width: 180px;
     position: absolute;
