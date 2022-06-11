@@ -1,9 +1,16 @@
 'use strict'
 
+let button = document.querySelector('.logo');
+let elem = document.querySelector('.dropdownMenu');
+button.addEventListener('click', function() {
+    elem.classList.toggle('active');
+});
+
+
 let parent = document.querySelector('.right_menu');
-let home = parent.querySelector('.home');
-let products = parent.querySelector('.products');
-let store = parent.querySelector('.store');
+let home = document.querySelector('.home');
+let products = document.querySelector('.products');
+let store = document.querySelector('.store');
 let before = document.querySelector('.before');
 
 let dropdownMenu = document.querySelector('.dropdownMenu');
@@ -35,8 +42,3 @@ function displaySize(){
 
 displaySize();
    
-    let button = document.querySelector('.logo');
-    let elem = document.querySelector('.dropdownMenu');
-    button.addEventListener('click', function() {
-        elem.classList.toggle('active');
-    });

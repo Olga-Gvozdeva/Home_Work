@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
       <link rel="stylesheet" href="CSS/style_mobile.css"> 
-      <script src="/JS/main.js"></script>
+      
 
       <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
@@ -101,30 +101,49 @@
 
           <script>
 
-    $(document).ready(function($) {
-	$('.popup-open').click(function() {
-		$('.popup-fade').fadeIn();
-		return false;
-	});	
-	
-	$('.popup-close').click(function() {
-		$(this).parents('.popup-fade').fadeOut();
-		return false;
-	});		
- 
-	$(document).keydown(function(e) {
-		if (e.keyCode === 27) {
-			e.stopPropagation();
-			$('.popup-fade').fadeOut();
-		}
-	});
-	
-	$('.popup-fade').click(function(e) {
-		if ($(e.target).closest('.popup').length == 0) {
-			$(this).fadeOut();					
-		}
-	});
-});
+let button = document.querySelector('.logo');
+let elem = document.querySelector('.dropdownMenu');
+button.addEventListener('click', function() {
+    elem.classList.toggle('active');
+});            
+
+let parent = document.querySelector('.right_menu');
+let home = document.querySelector('.home');
+let products = document.querySelector('.products');
+let store = document.querySelector('.store');
+let before = document.querySelector('.before');
+
+let dropdownMenu = document.querySelector('.dropdownMenu');
+
+let cloneHome = home.cloneNode(true);
+cloneHome.innerHTML = 'Home';
+
+let cloneProducts = products.cloneNode(true);
+cloneProducts.innerHTML = 'Products';
+
+let cloneStore = store.cloneNode(true);
+cloneStore.innerHTML = 'Store';
+
+window.addEventListener('resize', displaySize);
+
+function displaySize(){
+    let width = document.documentElement.clientWidth;
+    console.log(width);
+    if(width < 760){
+        dropdownMenu.insertBefore(cloneHome, before);
+        dropdownMenu.insertBefore(cloneProducts, before);
+        dropdownMenu.insertBefore(cloneStore, before);
+    }else{
+        cloneHome.remove();
+        cloneProducts.remove();
+        cloneStore.remove();
+    }
+}
+
+displaySize();
+   
+
+
             </script>  
       </body>
   </html>
