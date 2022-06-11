@@ -5,7 +5,9 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
-      <link rel="stylesheet" href="CSS/style_bigsize.css"> 
+      <link rel="stylesheet" href="CSS/style_mobile.css"> 
+      <script src="/JS/main.js"></script>
+
       <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
    </head>
       <body>
@@ -14,14 +16,14 @@
             <section>
                 <nav class="left_menu">
                     <div class="logo"></div>
-                    <a href="index.html" class="home"></a>
                     <input type="text" name="search" list="seachteam" placeholder="Seach store">
                 </nav>
             </section>
             <section>            
                 <nav class="right_menu">
-                    <a href="products.html">products</a>
-                    <a href="store.html">store</a>
+                    <a href="index.html" class="home">home</a>
+                    <a href="products.html" class="products">products</a>
+                    <a href="store.html" class="store">store</a>
                     <a href='basket.html' class="basket"></a>
                     <a href='person.html' class="person popup-open"></a>
                     <div class="popup-fade">
@@ -39,7 +41,7 @@
             <div class="main_content">
             <nav class='dropdownMenu'>
                 <h2>Explore</h2>
-                <a href="#">New In</a>
+                <a class ='before' href="#">New In</a>
                 <a href="#">Clothing</a>
                 <a href="#">Shoes</a>
                 <a href="#">Accessories</a>
@@ -89,7 +91,8 @@
             </section>
             <section>
                 <div class="footerBottom">
-                    <p class="rightReserved"><span class="fst">All rights reserved. Made with</span><span class="scd">by OlgaGvozdeva<span></p>
+                    <div class="rightReserved"><p class="fst">All rights reserved.</p>
+                        <p>Made with<span class="scd">by OlgaGvozdeva</span></p></div>
                     <a class="goTop" href="#">Go to top</a>
                 </div>
             </section>
@@ -97,12 +100,6 @@
 
 
           <script>
-        
-    let button = document.querySelector('.logo');
-    let elem = document.querySelector('.dropdownMenu');
-    button.addEventListener('click', function() {
-        elem.classList.toggle('active');
-    });
 
     $(document).ready(function($) {
 	$('.popup-open').click(function() {
