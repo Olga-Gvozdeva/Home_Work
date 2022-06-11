@@ -47,7 +47,7 @@ header{
     width: 100%;
     background-color: rgb(248, 242, 234);
     box-shadow: 5px 10px 20px #b5af86;
-
+    
 }
 
 .header_container{
@@ -57,7 +57,6 @@ header{
     box-sizing: border-box;
     margin: 6px auto 6px;
     height: 65px;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
@@ -74,6 +73,11 @@ header .logo{
     background-image: url(../Img/logo.png);
     background-repeat: no-repeat;
     background-position: center left;
+}
+
+header .home{
+    width: 46px;
+    background-image: url(../Img/home.png);
 }
 
 header input[type="text"]{
@@ -351,7 +355,7 @@ main{
     background-color: chartreuse;
 }
 
- 
+
 footer{
     width: 100%;
     background-color: rgb(248, 242, 234);
@@ -458,6 +462,6 @@ h3 ~ a, h3 ~ p{
     padding: 0 3px;
 }
 
-hr{
-    width: 100%;
+footer section:last-of-type{
+    border-top: 1px solid rgb(182, 173, 173);
 }
