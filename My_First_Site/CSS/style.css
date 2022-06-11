@@ -29,6 +29,7 @@ html * {
    
 html,  body {
     height: 100%;
+    min-width: 315px;
 }
 
 body {
@@ -75,11 +76,6 @@ header .logo{
     background-position: center left;
 }
 
-header .home{
-    width: 46px;
-    background-image: url(../Img/home.png);
-}
-
 header input[type="text"]{
     border: none;
     background-image: url(../Img/Union.png);
@@ -122,7 +118,6 @@ header input[type='text']::placeholder{
 }
 .person{
     background-image: url(../Img/person.png);
-    margin-left: -20px;
     box-sizing: border-box;
 }
 
@@ -370,7 +365,8 @@ footer{
     padding: 0 100px;
     flex-flow: row nowrap;
     height: 220px;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer_content .container{
@@ -445,6 +441,9 @@ h3 ~ a, h3 ~ p{
     width: max-content;
 }
 
+.rightReserved{
+    font-size: 14px;
+}
 .goTop{
     font-style: normal;
     font-weight: 700;
@@ -452,16 +451,17 @@ h3 ~ a, h3 ~ p{
     opacity: 0.6;
 }
 
-.rightReserved::before{
+.fst::before{
     content: '\00A9';
     margin-right: 3px;
 }
 
 .scd::before{
     content: '\2661';
-    padding: 0 3px;
+    padding: 0 5px;
 }
 
 footer section:last-of-type{
     border-top: 1px solid rgb(182, 173, 173);
+    width: 100%;
 }
