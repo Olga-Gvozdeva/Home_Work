@@ -462,3 +462,26 @@ footer section:last-of-type{
     border-top: 1px solid rgb(182, 173, 173);
     width: 100%;
 }
+
+.opener{
+    position: relative;
+    cursor: pointer;
+}
+.accordeon{
+    display: none;
+}
+
+.openAccordion{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    height: max-content;
+}
+
+.subItems{
+    display: none;
+}
+
+.openSub{
+    display: flex;
+}
