@@ -5,7 +5,7 @@ function dropmenuClick(){
 let button = document.querySelector('.logo');
 let elem = document.querySelector('.dropdownMenu');
 button.addEventListener('click', function() {
-    elem.classList.toggle('active');
+elem.classList.toggle('active');
 });
 }
 
