@@ -196,15 +196,18 @@ main{
 
 }
 
-.main_content{
+.mainRules{
     padding: 20px 100px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: minmax(200px, 250px) minmax(350px, 450px) minmax(170px, 200px) minmax(170px, 200px);
-    grid-template-rows: minmax(220px, 280px) minmax(220px, 280px);
     width: 100%;
     margin: 0 auto;
     gap: 20px;
+}
+
+.main_content{
+    grid-template-columns: minmax(200px, 250px) minmax(350px, 450px) minmax(170px, 200px) minmax(170px, 200px);
+    grid-template-rows: minmax(220px, 280px) minmax(220px, 280px);
     justify-content: space-between;
     grid-template-areas: 
     "n lto rto rtt"
@@ -297,14 +300,8 @@ main{
  }
 
  .store_content{
-    padding: 20px 100px;
-    box-sizing: border-box;
-    display: grid;
     grid-template-columns: minmax(200px, 250px) minmax(200px, 250px) minmax(200px, 250px) minmax(200px, 250px);
     grid-template-rows: minmax(200px, 250px) minmax(200px, 250px) minmax(150px, 220px) minmax(150px, 220px);
-    width: 100%;
-    margin: 0 auto;
-    gap: 20px;
     justify-content: space-between;
     grid-template-areas: 
     "sh sh mp mp"
