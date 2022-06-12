@@ -62,7 +62,6 @@ let f_windowWidth = function (width) {
 
 };
 
-
 document.addEventListener("DOMContentLoaded", dropmenuClick);
-
 document.addEventListener("DOMContentLoaded", displaySize);
+
