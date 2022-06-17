@@ -7,9 +7,8 @@
       <link rel="stylesheet" href="CSS/style_tablet.css">  
       <link rel="stylesheet" href="CSS/style_mobile.css"> 
       <script src="JS/main.js"></script>
-      
-
-      <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
+      <script defer src="JS/jquery-3.6.0.min.js"></script>
+      <script defer src="JS/jqmain.js"></script>   
    </head>
       <body>
           <header>
@@ -26,27 +25,27 @@
                     <a href="products.html" class="products">products</a>
                     <a href="store.html" class="store">store</a>
                     <a href='basket.html' class="basket"></a>
-                    <a href='person.html' class="person popup-open"></a>
-                    <div class="popup-fade">
-                        <div class="popup">
-                            <form class="popup-form">
+                    <a href="person.html" class="person"></a>
+                    <div class="popupFade">
+                        <div class="popUp">		
+                            <form class="popupForm">
                             </form>
-                            <a class="popup-close" href="#">Close</a>
-                        </div>		
-                    </div>
+                            <a class="popupClose" href="#">Close</a>
+                        </div>
+                    </div>		
                 </nav>
             </section>
             </div>
           </header>
           <main>
             <div class="main_content mainRules">
-            <nav class='dropdownMenu'>
-                <h2>Explore</h2>
-                <a class ='before' href="#">New In</a>
-                <a href="#">Clothing</a>
-                <a href="#">Shoes</a>
-                <a href="#">Accessories</a>
-            </nav>
+                <nav class='dropdownMenu'>
+                    <h2>Explore</h2>
+                    <a class ='before' href="products.html #newIn">New In</a>
+                    <a href="products.html #clothing">Clothing</a>
+                    <a href="products.html #shoes">Shoes</a>
+                    <a href="products.html #accessories">Accessories</a>
+                </nav>
             <div class="left_one">
                 <form>
                     <input type="checkbox" name="heart" id="heard">
@@ -100,10 +99,10 @@
           </footer>
 
 
-          <script>
+        <script>
 
 
-            </script>  
+        </script>  
       </body>
   </html>
 

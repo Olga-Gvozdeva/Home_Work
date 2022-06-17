@@ -1,14 +1,14 @@
 <!DOCTYPE html>
    <html lang="ru">
    <head>
-      <title>Store</title>
+      <title>Caped</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
       <link rel="stylesheet" href="CSS/style_mobile.css"> 
       <script src="JS/main.js"></script>
-      <script src="JS/jqmain.js"></script>   
-      <script src="JS/jquery-3.6.0.min.js"></script>
+      <script defer src="JS/jquery-3.6.0.min.js"></script>
+      <script defer src="JS/jqmain.js"></script>   
    </head>
       <body>
           <header>
@@ -25,71 +25,57 @@
                     <a href="products.html" class="products">products</a>
                     <a href="store.html" class="store">store</a>
                     <a href='basket.html' class="basket"></a>
-                    <a href='person.html' class="person popup-open"></a>
-                    <div class="popup-fade">
-                        <div class="popup">
-                            <form class="popup-form">
+                    <div class="person"></div>
+                    <div class="popupFade">
+                        <div class="popUp">		
+                            <form class="popupForm">
                             </form>
-                            <a class="popup-close" href="#">Close</a>
-                        </div>		
-                    </div>
+                            <a class="popupClose" href="#">Close</a>
+                        </div>
+                    </div>		
                 </nav>
             </section>
             </div>
           </header>
           <main>
-            <div class="products_content mainRules">
+            <div class="productsContent mainRules">
                 <nav class='dropdownMenu hiddenDrop'>
                     <h2>Explore</h2>
-                    <a class ='before' href="#">New In</a>
-                    <a href="#">Clothing</a>
-                    <a href="#">Shoes</a>
-                    <a href="#">Accessories</a>
+                    <a class ='before' href="#newIn">New In</a>
+                    <a href="#clothing">Clothing</a>
+                    <a href="#shoes">Shoes</a>
+                    <a href="#accessories">Accessories</a>
                 </nav>
                 <section class="catalog">
-                    <div class="container">
                         <aside class="catmenu">
-                            <div class="opener">Make your choice</div>
                             <nav class="accordeon">
                                 <ul>
                                     <li class="sub">
-                                        <a href="catalog.html">New In</a>
-                                        <ul class="subItems">
-                                            <li><a href="product.html">Dresses</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                            <li><a href="#">Pullovers</a></li>
-                                            <li><a href="#">Accessories</a></li>
-                                            <li class="sub">
-                                                <a href="#">Shoes</a>
-                                                <ul class="subItems">
-                                                    <li><a href="#">Heeled shoes</a></li>
-                                                    <li><a href="#">Summer shoes</a></li>
-                                                </ul>
-                                            </li>
+                                        <a href="#newIn">New In</a>
+                                        <ul>
+                                            <li><a href="#newdresses">Dresses</a></li>
+                                            <li><a href="#newskirts">Skirts</a></li>
+                                            <li><a href="#newpullovers">Pullovers</a></li>
+                                            <li><a href="#newaccessories">Accessories</a></li>
                                         </ul>
                                     </li>
                                     <li class="sub">
-                                        <a href="#">Sales</a>
-                                        <ul class="subItems">
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                            <li><a href="#">Pullovers</a></li>
+                                        <a href="#sales">Sales</a>
+                                        <ul >
+                                            <li><a href="#saleDresses">Dresses</a></li>
+                                            <li><a href="#saleSkirts">Skirts</a></li>
+                                            <li><a href="#salePullovers">Pullovers</a></li>
                                         </ul>
                                     </li>
                                     <li class="sub">
-                                        <a href="#">Clothing</a>
-                                        <ul class="subItems">
-                                            <li><a href="#">Dresses</a></li>
-                                            <li><a href="#">Skirts</a></li>
-                                            <li><a href="#">Pullovers</a></li>
-                                        </ul>
+                                        <a href="#clothing">Main Collection</a>
                                     </li>
                                     <li>
-                                        <a href="#">Accessories</a>
+                                        <a href="#accessories">Accessories</a>
                                     </li>
                                     <li class="sub">
-                                        <a href="#">Shoes</a>
-                                        <ul class="subItems">
+                                        <a href="#shoes">Shoes</a>
+                                        <ul >
                                             <li><a href="#">Heeled shoes</a></li>
                                             <li><a href="#">Summer shoes</a></li>
                                         </ul>
@@ -97,7 +83,70 @@
                                 </ul>
                             </nav>
                         </aside>
-                        
+                </section>   
+                <section class="catalogItems">
+                    <h2 id="newIn">New In</h2>
+                        <h5 id="newdresses">Dresses</h5>
+                        <div class="ndres1"></div>
+                        <div class="ndres2"></div>
+                        <div class="ndres3"></div>
+                        <h5 class="skirts">Skirts</h5>
+                        <div class="nskirt1"></div>
+                        <div class="nskirt2"></div>
+                        <div class="nskirt3"></div>
+                        <div class="nskirt4"></div>
+                        <h5 id="newpullovers">Pullovers</h5>
+                        <div class="npull1"></div>
+                        <div class="npull1"></div>
+                        <h5 id="newaccessories">Accessories</h5>
+                        <div class="naccess1"></div>
+                        <div class="naccess2"></div>
+                        <div class="naccess3"></div>
+                        <div class="naccess4"></div>
+                        <div class="naccess5"></div>
+                        <div class="naccess6"></div>
+                    <h2 id="sales">Sales</h2>
+                        <h5 id="saleDresses">Dresses</h5>
+                        <div class="sdres1"></div>
+                        <div class="sdres2"></div>
+                        <div class="sdres3"></div>
+                        <h5 id="saleSkirts">Skirts</h5>
+                        <div class="sskirt1"></div>
+                        <div class="sskirt2"></div>
+                        <h5 id="salePullovers">Pullovers</h5>
+                        <div class="spull1"></div>
+                        <div class="spull2"></div>
+                        <div class="spull3"></div>
+                        <div class="spull4"></div>
+                    <h2 id="clothing">Main Collection</h2>
+                        <div class="clothing1"></div>
+                        <div class="clothing2"></div>
+                        <div class="clothing3"></div>
+                        <div class="clothing4"></div>
+                        <div class="clothing5"></div>
+                        <div class="clothing6"></div>
+                        <div class="clothing7"></div>
+                        <div class="clothing8"></div>
+                        <div class="clothing9"></div>
+                        <div class="clothing10"></div>
+                        <div class="clothing11"></div>
+                    <h2 id="accessories">Accessories</h2>
+                        <div class="access1"></div>
+                        <div class="access2"></div>
+                        <div class="access3"></div>
+                        <div class="access4"></div>
+                        <div class="access5"></div>
+                        <div class="access6"></div>
+                        <div class="access7"></div>
+                        <div class="access8"></div>
+                    <h2 id="shoes">Shoes</h2>
+                        <div class="shoes1"></div>
+                        <div class="shoes2"></div>
+                        <div class="shoes3"></div>
+                        <div class="shoes4"></div>
+                        <div class="shoes5"></div>
+                        <div class="shoes6"></div>
+                </section>
             </div>
           </main>
           <footer>

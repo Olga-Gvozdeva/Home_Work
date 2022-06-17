@@ -4,6 +4,10 @@
     padding: 0 40px;
 }
 
+.mainRules{
+    padding: 20px 40px;
+}
+
 .dropdownMenu{
     display: none;
     
@@ -34,11 +38,6 @@ header .logo{
 .left_menu{
     width: 370px;
     height: 34px;
-}
-
-main{
-    height: 1200px;
-
 }
 
 .main_content{

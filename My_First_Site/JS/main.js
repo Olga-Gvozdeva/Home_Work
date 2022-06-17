@@ -62,6 +62,27 @@ let f_windowWidth = function (width) {
 
 };
 
-document.addEventListener("DOMContentLoaded", dropmenuClick);
-document.addEventListener("DOMContentLoaded", displaySize);
+
+function popUpOpen(){
+    let persons = document.querySelector('.person');
+    let popupFade = document.querySelector('.popupFade');
+
+    persons.addEventListener('click', function(){
+        popupFade.classList.toggle('fadeOpen')
+    });
+
+    let closepopUp = document.querySelector('.popupClose');
+    closepopUp.addEventListener('click', function(){
+        popupFade.classList.remove('fadeOpen')
+    })
+}
+
+function accordeon(){
+}
+
+//document.addEventListener("DOMContentLoaded", accordeon);
+//document.addEventListener("DOMContentLoaded", popUpOpen);
+//document.addEventListener("DOMContentLoaded", dropmenuClick);
+//document.addEventListener("DOMContentLoaded", displaySize);
+
 
