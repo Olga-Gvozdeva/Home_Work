@@ -78,11 +78,17 @@ function popUpOpen(){
 }
 
 function accordeon(){
+    let beta = document.querySelectorAll('.sub');
+    for(let elem of beta){
+        elem.firstElementChild.addEventListener('click', function(){
+            elem.lastElementChild.classList.toggle('openacc');
+        })
+    }
+    
 }
 
-//document.addEventListener("DOMContentLoaded", accordeon);
-//document.addEventListener("DOMContentLoaded", popUpOpen);
-//document.addEventListener("DOMContentLoaded", dropmenuClick);
-//document.addEventListener("DOMContentLoaded", displaySize);
-
+document.addEventListener("DOMContentLoaded", accordeon);
+document.addEventListener("DOMContentLoaded", popUpOpen);
+document.addEventListener("DOMContentLoaded", dropmenuClick);
+document.addEventListener("DOMContentLoaded", displaySize);
 

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
    <html lang="ru">
    <head>
-      <title>Store</title>
+      <title>Caped</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
       <link rel="stylesheet" href="CSS/style_mobile.css"> 
       <script src="JS/main.js"></script>
-
-      <script src="https://yandex.st/jquery/2.1.1/jquery.min.js"></script>
+      <script defer src="JS/jquery-3.6.0.min.js"></script>
+      <script defer src="JS/jqmain.js"></script>   
    </head>
       <body>
-          <header>
+        <header>
             <div class="header_container">
             <section>
                 <nav class="left_menu">
@@ -25,14 +25,14 @@
                     <a href="products.html" class="products">products</a>
                     <a href="store.html" class="store">store</a>
                     <a href='basket.html' class="basket"></a>
-                    <a href='person.html' class="person popup-open"></a>
-                    <div class="popup-fade">
-                        <div class="popup">
-                            <form class="popup-form">
+                    <a href="person.html" class="person"></a>
+                    <div class="popupFade">
+                        <div class="popUp">		
+                            <form class="popupForm">
                             </form>
-                            <a class="popup-close" href="#">Close</a>
-                        </div>		
-                    </div>
+                            <a class="popupClose" href="#">Close</a>
+                        </div>
+                    </div>		
                 </nav>
             </section>
             </div>
@@ -47,35 +47,68 @@
                     <a href="#">Accessories</a>
                 </nav>
                 <div class="shops">
-                    <div class="main_shop">
+                   
+                    <div class="mainShop">
+                       
+                        <div class="slider">
 
-                    </div>
-                    <div class="second_shop">
-                            <div class="slider"> 
-                                <div class="slider__wrapper">
-                                    <div class="slider__items">
-                                      <div class="slider__item"></div>
-                                      <div class="slider__item"></div>
-                                      <div class="slider__item"></div>
-                                      <div class="slider__item"></div>
-                                    </div>
-                                </div>
-                                <a href="#" class="slider__control" data-slide="prev"></a>
-                                <a href="#" class="slider__control" data-slide="next"></a>
-                                <ol class="slider__indicators">
-                                  <li data-slide-to="0"></li>
-                                  <li data-slide-to="1"></li>
-                                  <li data-slide-to="2"></li>
-                                  <li data-slide-to="3"></li>
-                                  <li data-slide-to="4"></li>
-                                </ol>
+                            <div class="item">
+                                <img src="Img/mag1.jpg" class="imgsize" alt="1pic">
                             </div>
-                          
+
+                            <div class="item">
+                                <img src="Img/mag12.jpg" class="imgsize" alt="2pic">
+                            </div>
+
+                            <div class="item">
+                                <img src="Img/mag13.jpg" class="imgsize" alt="3pic">
+                            </div>
+
+                            <a class="previous">&#10094;</a>
+                            <a class="next">&#10095;</a>
+                        </div>
+
+                        <div class="aboutStore">
+                            <h4>Adress</h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos qui ducimus  iusto qui blanditiis iusto qui praesentium</p>
+                            <p>Tel: 9 968 8494 84</p>
+                        </div>
                     </div>
+    
+                    <div class="secondShop">
+
+                        <div class="slider">
+
+                            <div class="item2">
+                                <img src="Img/mag2.jpg" class="imgsize" alt="1pic">
+                            </div>
+
+                            <div class="item2">
+                                <img src="Img/mag22.jpg" class="imgsize" alt="2pic">
+                            </div>
+
+                            <div class="item2">
+                                <img src="Img/mag23.jpg" class="imgsize" alt="3pic">
+                            </div>
+
+                            <a class="previous2">&#10094;</a>
+                            <a class="next2">&#10095;</a>
+                        </div>
+                        <div class="aboutStore">
+                            <h4>Adress</h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos qui ducimus  iusto qui blanditiis iusto qui praesentium</p>
+                            <p>Tel: 9 968 8494 84</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="map_shops"></div>
+                <div class="mapShops">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7f083105bbef1ea8f496710df76107f5b4e1033deece7cc6996d3ff3360667ad&amp;width=520&amp;height=520&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+
                 <div class="delivery">Картельные сговоры не допускают ситуации, при которой действия представителей оппозиции ассоциативно распределены по отраслям. Для современного мира существующая теория не оставляет шанса для дальнейших направлений развития. Таким образом, существующая теория способствует повышению качества переосмысления внешнеэкономических политик. Безусловно, понимание сути ресурсосберегающих технологий позволяет выполнить важные задания по разработке системы обучения кадров, соответствующей насущным потребностям. Кстати, непосредственные участники технического прогресса обнародованы. Современные технологии достигли такого уровня, что понимание сути ресурсосберегающих технологий обеспечивает широкому кругу (специалистов) участие в формировании первоочередных требований.</div>
+                
                 <div class="returns">
                     <p>Картельные сговоры не допускают ситуации, при которой действия представителей оппозиции ассоциативно распределены по отраслям. Для современного мира существующая теория не оставляет шанса для дальнейших направлений развития. Таким образом, существующая теория способствует повышению качества переосмысления внешнеэкономических политик. Безусловно, понимание сути ресурсосберегающих технологий позволяет выполнить важные задания по разработке системы обучения кадров, соответствующей насущным потребностям. Кстати, непосредственные участники технического прогресса обнародованы. Современные технологии достигли такого уровня, что понимание сути ресурсосберегающих технологий обеспечивает широкому кругу (специалистов) участие в формировании первоочередных требований.
                     </p>
@@ -117,9 +150,48 @@
           </footer>
 
 
-          <script>
+        <script>
 
-            </script>  
+function slidebar(perem1, perem2, perem3){
+
+document.querySelector(perem1).addEventListener("click", previousSlide);
+document.querySelector(perem2).addEventListener("click", nextSlide);
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function nextSlide() {
+showSlides(slideIndex += 1);
+}
+function previousSlide() {
+showSlides(slideIndex -= 1);  
+}
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.querySelectorAll(perem3);
+
+if (n > slides.length) {
+  slideIndex = 1
+}
+if (n < 1) {
+    slideIndex = slides.length
+}
+
+for (let slide of slides) {
+    slide.style.display = "none";
+}   
+slides[slideIndex - 1].style.display = "block"; 
+}
+}
+
+slidebar('.previous','.next','.item');
+slidebar('.previous2','.next2','.item2');
+
+        </script>  
       </body>
   </html>
 
