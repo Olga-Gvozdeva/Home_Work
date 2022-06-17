@@ -301,9 +301,9 @@ main{
  }
 
  .store_content{
-    grid-template-columns: minmax(400px, 500px) minmax(400px, 500px);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: minmax(400px, 500px) minmax(150px, 220px) minmax(150px, 220px);
-    justify-content: space-between;
+    justify-items: end;
     grid-template-areas: 
     "sh mp"
     "dd dd"
