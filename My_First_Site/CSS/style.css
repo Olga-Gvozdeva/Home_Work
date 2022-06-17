@@ -173,16 +173,34 @@ header input[type='text']::placeholder{
     position: absolute;
     top: 90px;
     left: 40px;
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0 0 5px white;
+    animation: pulse 3s infinite;
 }
 
 .dot:hover{
     cursor: pointer;
+    animation: none;
 }
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 10px rgba(222, 215, 187, 0.4);
+    }
+
+    40% {
+        box-shadow: 0 0 0 20px rgba(207, 204, 192, 0);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(210, 207, 196, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
 
 .right_two .dot{
     top: 220px;
@@ -252,7 +270,27 @@ main{
 }
 .left_one, .left_two{
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+
 }
+
+#textForForm, #textForForm2{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+
+}
+
+#textForForm:hover, #textForForm2:hover{
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
 .right_one{
     grid-area: rto;
     background-image: url(../Img/aest.jpg);
@@ -265,8 +303,6 @@ main{
     border-radius: 5px;
     background-size: cover;
 }
-
-
 
 .heard_btn{
     display: inline-block;
