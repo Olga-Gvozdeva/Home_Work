@@ -617,3 +617,9 @@ a ~ ul{
     border-top: 1px solid lightgrey;
 
 }
+
+.divclass, .divclassq, .divclasse{
+    font-size: 24px;
+    color: red;
+    padding-left: 20px;
+}
