@@ -338,8 +338,8 @@ main{
 
  .store_content{
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: minmax(400px, 500px) minmax(150px, 220px) minmax(150px, 220px);
-    justify-items: end;
+    grid-template-rows: minmax(400px, 500px)max-content max-content;
+    /*justify-items: end;*/
     grid-template-areas: 
     "sh mp"
     "dd dd"
@@ -362,7 +362,7 @@ main{
     grid-area: sh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
 
@@ -415,16 +415,17 @@ main{
 .mapShops{
     grid-area: mp;
     overflow: hidden;;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .delivery{
     grid-area: dd;
-    background-color: #E06000;
 }
 
 .returns{
     grid-area: rt;
-    background-color: chartreuse;
 }
 
 
@@ -601,4 +602,18 @@ a ~ ul{
 
 .openacc{
     display: block;
+}
+
+.textDelivery, .textReturns{
+    display: none;
+}
+
+.activeTitle{
+    display: block;
+}
+
+.aboutDelivery, .aboutReturns{
+    cursor: pointer;
+    border-top: 1px solid lightgrey;
+
 }
