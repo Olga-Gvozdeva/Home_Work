@@ -87,9 +87,9 @@
                 <section class="catalogItems">
                     <h2 id="newIn">New In</h2>
                         <h5 id="newdresses">Dresses</h5>
-                        <div class="ndres1 click" data-name="first dress" data-prise="120"></div>
-                        <div class="ndres2 click" data-name="second dress" data-prise="220"></div>
-                        <div class="ndres3 click"></div>
+                        <div class="ndres1 click" data-name="first dress" data-prise="120" data-article="100"></div>
+                        <div class="ndres2 click" data-name="second dress" data-prise="220" data-article="101"></div>
+                        <div class="ndres3 click" data-name="third dress" data-prise="512" data-article="102"></div>
                         <h5 class="skirts">Skirts</h5>
                         <div class="nskirt1"></div>
                         <div class="nskirt2"></div>
@@ -186,43 +186,25 @@
 
           <script>
 
-/*
-let beta = document.getElementsByName('first dress');
-console.log(beta);
-
-beta.addEventListener('click', function(){
-
-})
-*/
-/*
-window.onload = function addLocal(){
-
-let alfa = document.querySelectorAll('.click');
-
-alfa.onclick = function() {
-
-    let obj = {
-
-};
-obj['name'] = alfa.dataset.name;
-obj['prise'] = alfa.dataset.prise;
-obj['total'] = '1';
-
-
-console.log(obj);
- 
-}
-}
-*/
 
 function hiperion(){
+let alzir = document.querySelectorAll('.click');
 
-let alzir = document.querySelector('.ndres1');
-let sort = [];
-let ips = 0;
+for(i = 0; i < alzir.length; i++){
+    let sossa = alzir[i];
 
-alzir.onclick = function () {
+    sossa.addEventListener('click', function(){
+        beta = [sossa.dataset.name, sossa.dataset.prise];
+        let keylocal = sossa.dataset.article;
+        localStorage.setItem(keylocal, beta);
 
+    })
+
+    };
+    }
+
+
+/*
 ips++;
 
 sort[0] = alzir.dataset.name;
@@ -246,7 +228,7 @@ console.log(localValue);
 
 }
 
-
+*/
 
 document.addEventListener("DOMContentLoaded", hiperion);
 

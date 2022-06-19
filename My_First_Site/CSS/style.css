@@ -618,16 +618,6 @@ a ~ ul{
 
 }
 
-.divclass, .divclassq, .divclasse{
-    font-size: 24px;
-    color: red;
-    padding-left: 20px;
-}
-
-.basket_content{
-    display: flex;
-    flex-flow: column nowrap;
-}
 
 .itemsBasket div{
     height: 100px;
@@ -635,8 +625,22 @@ a ~ ul{
 }
 
 .itemsBasket{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: max-content;
     
+}
+
+.delite{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.addItem{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
 }

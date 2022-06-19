@@ -50,9 +50,9 @@
                 <h2>Your Basket</h2>
 
                 <div class="itemsBasket">
-                    <div class="nameimport"></div>
-                    <div class="itemPrise"></div>
-                    <div class="itemTotal"></div>
+
+                    <button class="delite"></button>
+
                 </div>
             </div>
 
@@ -94,38 +94,86 @@
 
           <script>
 
+
+//let name = document.createElement('div');
+
+//name.className = "nameClass";
+
+let gamma = {
+
+};
+
+  for(let i = 0; i < localStorage.length; i++) {
+  let key = localStorage.key(i);
+
+  let greta = localStorage.getItem(key);
+
+  let arrofgreta = greta.split(',');
+
+  gamma[key] = arrofgreta;
+
+}
+
+console.log(gamma);
+
+
+for(elem in gamma){
+    let fara = gamma[elem];
+
+  let deldata = document.querySelector('.itemsBasket');
+  let div = document.createElement('div');
+  let div2 = document.createElement('div');
+  let kolv = document.createElement('div')
+  div.className = "className";
+  div2.className = "className";
+  kolv.className = "howmuch"
+  div.innerHTML = fara[1];
+  div2.innerHTML = fara[0];
+
+  let dobavit = document.createElement('button');
+  dobavit.className = "addItem";
+  let clicks = 1;
+
+  dobavit.addEventListener('click', function(){
+    clicks++
+  })
+
+
+
+  kolv.innerHTML = 1 * clicks;
+
+  deldata.prepend(div);
+  deldata.prepend(kolv);
+  deldata.prepend(div2);
+
+
+}
+
+
+
 /*
-let name = document.createElement('h3');
+function gaga(main, param){
+let main = document.querySelector(param);
 
-name.className = "nameClass";
+main.addEventListener('click', function(){
 
-name.innerHTML = arr[0];
-prise.innerHTML = arr[1] * arr[2];
-total.innerHTML = arr[2];
+    localStorage.removeItem(param);
+    location.reload();
+})
 
-ol.prepend(total);
-ol.prepend(prise);
-ol.prepend(name);
-
-*/
-let localValue = localStorage.getItem('key');
-
-let hahara = JSON.parse(localValue);
-
-console.log(hahara);
-
-let tatara = document.querySelector('.nameimport');
-let lalala = document.querySelector('.itemPrise');
-let tatata = document.querySelector('.itemTotal');
-tatara.innerHTML = hahara[0];
-lalala.innerHTML = hahara[2];
-tatata.innerHTML = hahara[1];
-
-
-
+}
 
 
 /* По нажатию на элемент продукт создается объект с ключами имя цена количество, он через джейсон сохраняется в локал сторадж. Из локал сторадж объект достается на странице баскет скриптом, создается див и переносятся в него значения*/
+
+/*
+
+
+  let deldata = document.querySelector('.itemsBasket');
+  let div = document.createElement('div');
+  div.className = "className";
+  div.innerHTML = gamma;
+  deldata.prepend(div);*/
             </script>  
       </body>
   </html>
