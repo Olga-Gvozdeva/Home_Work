@@ -131,3 +131,7 @@ document.addEventListener("DOMContentLoaded",function(){
     slidebar('.previous','.next','.item');
     slidebar('.previous2','.next2','.item2');
 });
+
+/*jggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
+
+

@@ -623,3 +623,20 @@ a ~ ul{
     color: red;
     padding-left: 20px;
 }
+
+.basket_content{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.itemsBasket div{
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+.itemsBasket{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    
+}

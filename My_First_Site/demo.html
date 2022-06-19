@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    Key: <input type="text">
+    Value: <input type="text">
+    <button id="add">Add</button>
+    <button id="show">Show</button>
+    <div id="out"></div>
+    <script type="module">
+        let obj = new Map(),
+            arr = document.querySelectorAll('input'),
+            btn = document.getElementById('add'),
+            show = document.getElementById('show'),
+            out = document.getElementById("out"),
+            key,
+            val;
+ 
+        btn.onclick = add_click;
+        show.onclick = show_click;
+ 
+        function add_click() {
+            key = arr[0].value;
+            val = arr[1].value;
+            obj.set(key, val);
+            console.log(key);
+            console.log(val);
+        };
+ 
+        function show_click() {
+            let str = "";
+            for (let [key, value] of obj) {
+                str += `[${key}]=${value}<br />`; // Шаблонные строки
+            }
+            // document.write() не надо использовать
+            out.innerHTML = str;
+        }
+    </script>
+</body>
+</html>

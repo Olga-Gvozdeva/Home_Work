@@ -87,9 +87,9 @@
                 <section class="catalogItems">
                     <h2 id="newIn">New In</h2>
                         <h5 id="newdresses">Dresses</h5>
-                        <div class="ndres1" name ="first dress"></div>
-                        <div class="ndres2"></div>
-                        <div class="ndres3"></div>
+                        <div class="ndres1 click" data-name="first dress" data-prise="120"></div>
+                        <div class="ndres2 click" data-name="second dress" data-prise="220"></div>
+                        <div class="ndres3 click"></div>
                         <h5 class="skirts">Skirts</h5>
                         <div class="nskirt1"></div>
                         <div class="nskirt2"></div>
@@ -194,6 +194,62 @@ beta.addEventListener('click', function(){
 
 })
 */
+/*
+window.onload = function addLocal(){
+
+let alfa = document.querySelectorAll('.click');
+
+alfa.onclick = function() {
+
+    let obj = {
+
+};
+obj['name'] = alfa.dataset.name;
+obj['prise'] = alfa.dataset.prise;
+obj['total'] = '1';
+
+
+console.log(obj);
+ 
+}
+}
+*/
+
+function hiperion(){
+
+let alzir = document.querySelector('.ndres1');
+let sort = [];
+let ips = 0;
+
+alzir.onclick = function () {
+
+ips++;
+
+sort[0] = alzir.dataset.name;
+sort[2] = ips;
+sort[1] = alzir.dataset.prise * sort[2];
+
+//let tata = sort.toString();
+
+//console.log(tata);
+
+let tata = JSON.stringify(sort);
+
+console.log(tata);
+
+localStorage.setItem('key', tata);
+
+let localValue = localStorage.getItem('key');
+
+console.log(localValue);
+}
+
+}
+
+
+
+document.addEventListener("DOMContentLoaded", hiperion);
+
 
 
             </script>  

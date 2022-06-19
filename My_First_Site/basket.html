@@ -46,19 +46,15 @@
                     <a href="#">Shoes</a>
                     <a href="#">Accessories</a>
                 </nav>
+
+                <h2>Your Basket</h2>
+
+                <div class="itemsBasket">
+                    <div class="nameimport"></div>
+                    <div class="itemPrise"></div>
+                    <div class="itemTotal"></div>
+                </div>
             </div>
-
-
-
-            <ol id="ol">
-                <li>0</li>
-                <li>1</li>
-                <li>2</li>
-              </ol>
-
-
-
-
 
           </main>
           <footer>
@@ -98,33 +94,38 @@
 
           <script>
 
-let obj = {name: 'first dress', prise: '120', total: '5'};
+/*
+let name = document.createElement('h3');
 
-arr = [];
-for(elem in obj){
-    arr.push(obj[elem]);
-    console.log(arr);
-}
+name.className = "nameClass";
 
-let div = document.createElement('div');
-let divq = document.createElement('div');
-let dive = document.createElement('div');
+name.innerHTML = arr[0];
+prise.innerHTML = arr[1] * arr[2];
+total.innerHTML = arr[2];
+
+ol.prepend(total);
+ol.prepend(prise);
+ol.prepend(name);
+
+*/
+let localValue = localStorage.getItem('key');
+
+let hahara = JSON.parse(localValue);
+
+console.log(hahara);
+
+let tatara = document.querySelector('.nameimport');
+let lalala = document.querySelector('.itemPrise');
+let tatata = document.querySelector('.itemTotal');
+tatara.innerHTML = hahara[0];
+lalala.innerHTML = hahara[2];
+tatata.innerHTML = hahara[1];
 
 
-div.className = "divclass";
-divq.className = "divclassq";
-dive.className = "divclasse";
-
-div.innerHTML = arr[0];
-divq.innerHTML = arr[1] * arr[2];
-dive.innerHTML = arr[2];
 
 
-ol.prepend(div);
-ol.prepend(divq);
-ol.prepend(dive);
 
-
+/* По нажатию на элемент продукт создается объект с ключами имя цена количество, он через джейсон сохраняется в локал сторадж. Из локал сторадж объект достается на странице баскет скриптом, создается див и переносятся в него значения*/
             </script>  
       </body>
   </html>
