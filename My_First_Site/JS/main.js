@@ -156,7 +156,7 @@ function basket(){
     }
 }
 
-//ffffffffffffffffffffffffffffffffffffff
+let gamma = [];
 
 function gataka(){
 
@@ -178,9 +178,6 @@ function gataka(){
     }
     
 }
-
-
-//ffffffffffffffffffffffffffffffffffffffffff
 
 function writeTable() {
     if (!gamma.length) {
@@ -204,6 +201,10 @@ function removeTovar(id) {
     for (let i = 0; i < gamma.length; i++) {
         if (gamma[i].art == id) {
             gamma.splice(i, 1);
+            
+                let key = localStorage.key(i);
+                localStorage.removeItem(key);
+            
             return true;
         }
     }
@@ -346,20 +347,5 @@ function getCalendar(fieldDate) {
 }
 
 /*
-function addTovar(tovar){
-    let basket = JSON.parse(localStorage.getItem('addTovar'));
-    let flag = false;
-    if (basket) {
-        for (let i of basket) {
-            if (i.id = tovar.id) {
-                i.qty += tovar.qty;
-                flag = true;
-            }
-        }
-        if (!flag) basket.push(tovar);
-    } else {
-        basket = [tovar];
-    }
-    localStorage.setItem('addTovar', JSON.stringify(basket));
-}
+
 */
