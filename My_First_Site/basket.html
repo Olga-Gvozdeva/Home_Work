@@ -6,9 +6,9 @@
       <link rel="stylesheet" href="CSS/style.css">  
       <link rel="stylesheet" href="CSS/style_tablet.css">  
       <link rel="stylesheet" href="CSS/style_mobile.css"> 
-      <script src="JS/main.js"></script>
-      <script defer src="JS/jquery-3.6.0.min.js"></script>
-      <script defer src="JS/jqmain.js"></script>   
+      <script src="JS/jquery-3.6.0.min.js"></script>
+      <script src="JS/jqmain.js"></script>  
+      <script src="JS/main.js"></script>   
    </head>
       <body>
         <header>
@@ -46,17 +46,32 @@
                     <a href="#">Shoes</a>
                     <a href="#">Accessories</a>
                 </nav>
-
-                <h2>Your Basket</h2>
-
-                <div class="itemsBasket">
-                
-                    <div class="nameofItem">Name of Item</div>
-                    <div class="quantity">Quantity of Goods</div>
-                    <div class="price">Price</div>
-                    <div class="total">Total</div>
+                    <h1>Корзина</h1>
+                    <div class="table"></div>
+                    <div class="form">
+                        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" name="orderform">
+                            <fieldset>
+                                <legend>Данные получателя:</legend>
+                                
+                                <input type="text" name="name" id="name" placeholder="Имя">
+                                
+                                <input type="text" name="phone" id="phone" placeholder="Телефон">
+                                
+                                <input type="text" name="mail" id="mail" placeholder="Почта">
+                                
+                                <textarea name="comment" id="comment"></textarea>
+                            </fieldset>
+                            
+                            <fieldset>
+                                <legend>Дата доставки:</legend>
+                                
+                                <input type="text" name="date" id="date" placeholder="ДД-ММ-ГГГГ" autocomplete="off">
+                            </fieldset>
+                                
+                            <button type="submit" class="sendform">Отправить</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
 
           </main>
           <footer>
@@ -97,22 +112,30 @@
           <script>
 
 
-let gamma = {
+let gamma = [];
 
+
+  for(i in localStorage) {
+
+if((i.slice(0,3)) == ('art')){
+
+    let l = localStorage[i].split(',');
+    let obj = {
+        art: i.slice(5),
+        name: l[0],
+        price: parseInt(l[1]),
+        quantity: 1
+    }
+    gamma.push(obj);
 };
 
-  for(let i = 0; i < localStorage.length; i++) {
-  let key = localStorage.key(i);
-
-  let greta = localStorage.getItem(key);
-
-  let arrofgreta = greta.split(',');
-
-  gamma[key] = arrofgreta;
+localStorage.removeItem(i);
 
 }
 
 console.log(gamma);
+
+
 
 
 /*
