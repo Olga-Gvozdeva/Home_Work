@@ -182,12 +182,12 @@ function gataka(){
 function writeTable() {
     if (!gamma.length) {
         $('.table, .form').remove();
-        $('h2').after('<div class="empty">Add items to Сart</div>');
+        $('.nullBasket').after('<div class="empty">Add items to Сart</div>');
         return;
     }
     
     let tab = $('.table');
-    let hlpstr = '<div class="tr top"><div class="id">Art</div><div class="name">Product Name</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
+    let hlpstr = '<div class="tr top"><div class="id"></div><div class="name">Product Name</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
     let sum = 0;
     for (item of gamma) {
         sum += (item.quantity * item.price);

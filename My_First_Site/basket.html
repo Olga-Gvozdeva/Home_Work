@@ -46,7 +46,7 @@
                     <a href="#">Shoes</a>
                     <a href="#">Accessories</a>
                 </nav>
-                    <h2>Your basket</h2>
+                    <h2 class="nullBasket">Your Cart</h2>
                     <div class="table"></div>
                     <div class="form">
                         <form action="https://jsonplaceholder.typicode.com/posts" method="POST" name="orderform">
@@ -111,91 +111,7 @@
 
           <script>
 
-/*
-let gamma = [];
 
-
-  for(i in localStorage) {
-
-if((i.slice(0,3)) == ('art')){
-
-    let l = localStorage[i].split(',');
-    let obj = {
-        art: i.slice(5),
-        name: l[0],
-        price: parseInt(l[1]),
-        quantity: 1
-    }
-    gamma.push(obj);
-};
-
-localStorage.removeItem(i);
-
-}
-
-console.log(gamma);
-*/
-
-
-
-/*
-for(elem in gamma){
-    let fara = gamma[elem];
-
-  let deldata = document.querySelector('.itemsBasket');
-  let div = document.createElement('div');
-  let div2 = document.createElement('div');
-  let kolv = document.createElement('div')
-  div.className = "className";
-  div2.className = "className";
-  kolv.className = "howmuch"
-  div.innerHTML = fara[1];
-  div2.innerHTML = fara[0];
-
-  let dobavit = document.createElement('button');
-  dobavit.className = "addItem";
-  let clicks = 1;
-
-  dobavit.addEventListener('click', function(){
-    clicks++
-  })
-
-
-
-  kolv.innerHTML = 1 * clicks;
-
-  deldata.prepend(div);
-  deldata.prepend(kolv);
-  deldata.prepend(div2);
-
-
-}
-
-
-
-/*
-function gaga(main, param){
-let main = document.querySelector(param);
-
-main.addEventListener('click', function(){
-
-    localStorage.removeItem(param);
-    location.reload();
-})
-
-}
-
-
-/* По нажатию на элемент продукт создается объект с ключами имя цена количество, он через джейсон сохраняется в локал сторадж. Из локал сторадж объект достается на странице баскет скриптом, создается див и переносятся в него значения*/
-
-/*
-
-
-  let deldata = document.querySelector('.itemsBasket');
-  let div = document.createElement('div');
-  div.className = "className";
-  div.innerHTML = gamma;
-  deldata.prepend(div);*/
             </script>  
       </body>
   </html>

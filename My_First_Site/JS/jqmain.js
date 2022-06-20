@@ -13,10 +13,7 @@ writeTable();
 
 basket();
 
-//makeCalendar(fieldDate);
-//getCalendar(fieldDate);
 
-//removeTovar(id);
 /*
 $('.item').click(function(){
     if ($(this).data('href')) location.assign($(this).data('href'));
@@ -72,12 +69,9 @@ if ($('.table').length) {
         if (removeTovar(id)) writeTable();
     });
 
+/*
 
 
-
-
-
-    
     $('.form form').submit(function(e){
         e.preventDefault();
         formValidate(this);
@@ -85,6 +79,11 @@ if ($('.table').length) {
     $('#date').focus(function(){
         getCalendar($('#date').val());
     });
+
+*/
+
+
+
 }
 
 });
