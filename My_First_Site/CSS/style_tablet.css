@@ -37,11 +37,11 @@ header .logo{
 }
 
 .main_content{
-    padding: 20px 100px;
+
     box-sizing: border-box;
     display: grid;
     align-content: stretch;
-    grid-template-columns: minmax(200px, 300px) minmax(200px, 300px);
+    grid-template-columns: minmax(150px, 300px) minmax(150px, 300px);
     grid-template-rows: minmax(220px, 280px) minmax(220px, 280px) minmax(390px, 490px);
     justify-content: center;
     height: 1135px;
@@ -63,4 +63,23 @@ header .logo{
     height: 270px;
 
 }
+
+h2{
+    font-size: 1.2em;
+}
+
+.table div {
+    font-size: 20px;
+}
+
+.mainRules{
+    padding: 20px 40px;
+}
+
+.quantity button, .delete button {
+    font-size: 22px;
+    line-height: 24px;
+    width: 24px;
+}
+
 }

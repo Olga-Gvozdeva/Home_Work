@@ -63,4 +63,35 @@ footer{
 .rightReserved{
     order: 2;
 }
+
+.table div {
+    font-size: 14px;
+}
+
+h2{
+    font-size: 1em;
+}
+
+.mainRules {
+    padding: 20px 20px;
+
+}
+
+.quantity {
+    gap: 6px;
+}
+
+.table .price::after,
+.table .summa::after{
+	content: '';
+}
+
+.productsContent{
+    grid-template-columns: 1fr;
+}
+.catalog{
+    display: none;
+}
+
+
 }

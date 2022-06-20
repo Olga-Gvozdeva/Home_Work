@@ -582,9 +582,12 @@ h5 ~ div{
     font-size: 20px;
 }
 
-.sub li:hover{
-    background-color: rgb(248, 242, 234);
-    border-radius: 10px;
+.sub:hover, .sub li:hover, .accordeon ul li:nth-child(4):hover{
+    
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+
 }
 h5{
     border-bottom: 1px solid grey;
@@ -718,7 +721,7 @@ a ~ ul{
 
 
 
-/* order */
+/* Оставляем */
 .table div {
     font-size: 24px;
     line-height: 48px;
@@ -768,6 +771,7 @@ a ~ ul{
 }
 .quantity {
     display: flex;
+    justify-content: center;
     padding-right: 48px;
     gap: 16px;
 }
@@ -780,16 +784,14 @@ a ~ ul{
 }
 fieldset {
     margin: 16px 0;
-    border: 2px solid red;
+    border: 2px solid rgb(118, 110, 99);
     padding: 16px;
 }
 legend {
     font-weight: bold;
-    color: red;
 }
 input {
     display: block;
-    margin-top: 16px;
     border: 1px solid gray;
     padding: 16px;
     color: gray;
@@ -812,8 +814,7 @@ legend + input {
     display: block;
     width: 200px;
     padding: 16px;
-    background: red;
-    color: white;
+    background-color: rgb(248, 242, 234);
     cursor: pointer;
 }
 

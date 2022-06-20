@@ -187,7 +187,7 @@ function writeTable() {
     }
     
     let tab = $('.table');
-    let hlpstr = '<div class="tr top"><div class="id"></div><div class="name">Product Name</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
+    let hlpstr = '<div class="tr top"><div class="id"></div><div class="name">Product</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
     let sum = 0;
     for (item of gamma) {
         sum += (item.quantity * item.price);
