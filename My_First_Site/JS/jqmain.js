@@ -5,14 +5,22 @@ popUpOpen();
 dropmenuClick();
 displaySize();
 hiperion();
+gataka();
+writeTable();
 
 //slidebar('.previous','.next','.item');
 //slidebar('.previous2','.next2','.item2');
 
 basket();
 
+//makeCalendar(fieldDate);
+//getCalendar(fieldDate);
+
+//removeTovar(id);
+
 });
 
+let gamma = [];
 
 $('.item').click(function(){
     if ($(this).data('href')) location.assign($(this).data('href'));

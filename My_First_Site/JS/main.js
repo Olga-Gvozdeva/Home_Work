@@ -156,53 +156,61 @@ function basket(){
     }
 }
 
+//ffffffffffffffffffffffffffffffffffffff
+
+function gataka(){
+
+
+  for(i in localStorage) {
+
+    if((i.slice(0,3)) == ('art')){
+    
+        let l = localStorage[i].split(',');
+        let obj = {
+            art: i.slice(5),
+            name: l[0],
+            price: parseInt(l[1]),
+            quantity: 1
+        }
+        gamma.push(obj);
+    };
+    
+    }
+    
+}
+
+
+//ffffffffffffffffffffffffffffffffffffffffff
+
 function writeTable() {
-    if (!tovardata.length) {
+    if (!gamma.length) {
         $('.table, .form').remove();
-        $('h1').after('<div class="empty">Ваша корзина пуста!</div>');
+        $('h2').after('<div class="empty">Add items to Сart</div>');
         return;
     }
+    
     let tab = $('.table');
-    let hlpstr = '<div class="tr top"><div class="id">№</div><div class="name">Наименование</div><div class="price">Цена</div><div class="quantity">Количество</div><div class="summa">Сумма</div><div class="delete"></div></div>';
+    let hlpstr = '<div class="tr top"><div class="id">Art</div><div class="name">Product Name</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
     let sum = 0;
-    for (item of tovardata) {
-        sum += (item.qty * item.price);
-        hlpstr += '<div class="tr"><div class="id" id="tovar_' + item.id + '">1</div><div class="name">' + item.name + '</div><div class="price">' + item.price + '</div><div class="quantity"><button type="button">&minus;</button><span class="number">' + item.qty + '</span><button type="button">&plus;</button></div><div class="summa">' + (item.qty * item.price) + '</div><div class="delete"><button type="button">&times;</button></div></div>';
+    for (item of gamma) {
+        sum += (item.quantity * item.price);
+        hlpstr += '<div class="tr"><div class="id" id="tovar_' + item.art + '"></div><div class="name">' + item.name + '</div><div class="price">' + item.price + '</div><div class="quantity"><button type="button">&minus;</button><span class="number">' + item.quantity + '</span><button type="button">&plus;</button></div><div class="summa">' + (item.quantity * item.price) + '</div><div class="delete"><button type="button">&times;</button></div></div>';
     }
     hlpstr += '<div class="tr bottom"><div class="text">Итого:</div><div class="itog">' + sum + '</div></div>';
     tab.html(hlpstr);
 }
 
 function removeTovar(id) {
-    for (let i = 0; i < tovardata.length; i++) {
-        if (tovardata[i].id == id) {
-            tovardata.splice(i, 1);
+    for (let i = 0; i < gamma.length; i++) {
+        if (gamma[i].art == id) {
+            gamma.splice(i, 1);
             return true;
         }
     }
     return false;
 }
 
-function getCurrency1() {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://www.cbr-xml-daily.ru/daily_json.js');
-    xhr.onreadystatechange = function() {
-        if ((xhr.readyState == 4) && (xhr.status == 200)) {
-            $('#currency1').html(JSON.parse(xhr.response).Valute.USD.Value.toFixed(2) + ' рублей за доллар');
-        }
-    };
-    xhr.send();
-}
-
-function getCurrency2() {
-    $.get('https://www.cbr-xml-daily.ru/daily_json.js', function(response){
-        $('#currency2').html(JSON.parse(response).Valute.EUR.Value.toFixed(2) + ' рублей за евро');
-    });
-}
-
-function getCurrency3() {
-    fetch("https://www.cbr-xml-daily.ru/daily_json.js").then(response => response.json()).then(response => $('#currency3').html(response.Valute.CNY.Value.toFixed(2) + ' рублей за юань'));
-}
+/*
 
 function formValidate(form) {
     let name = $('#name').val();
@@ -243,6 +251,8 @@ function formValidate(form) {
     });
 }
 
+//ooooooooooooooooooooooooooooooooooooooooo
+
 function makeAlert(response) {
     let hlpstr = '<div class="alertbox"><button type="button">&times;</button><p>Ваш заказ оформлен под номером ' + response.id + '.</p></div>';
     $('body').append('<div class="screen"></div>');
@@ -255,6 +265,8 @@ function makeAlert(response) {
     $('.alertbox').animate({opacity:1}, 500);
 }
 
+//oooooooooooooooooooooooooooooooooooooooooooooooooooo
+
 function makeCalendar(fieldDate) {
     let hlpdate = new Date();
     let curyear, curmonth, curday;
@@ -266,6 +278,7 @@ function makeCalendar(fieldDate) {
     curyear = hlpdate.getFullYear();
     curmonth = hlpdate.getMonth();
     curday = hlpdate.getDate();
+
     /*
     if (fieldDate.match(/^\d{2}\-\d{2}\-\d{4}$/)) {
         [curday, curmonth, curyear] = fieldDate.split('-');
@@ -276,7 +289,8 @@ function makeCalendar(fieldDate) {
             curday = now.getDate();
         }
     }
-    */
+    
+   
     hlpdate = new Date(curyear, curmonth);
     let prevdays = ((hlpdate.getDay() + 6) % 7); // пн - 0, вт - 1 ... сб - 5, вс - 6
     hlpdate = new Date(curyear, curmonth + 1, 0);
@@ -331,6 +345,7 @@ function getCalendar(fieldDate) {
     $('.calendarbox').animate({opacity:1}, 500);
 }
 
+/*
 function addTovar(tovar){
     let basket = JSON.parse(localStorage.getItem('addTovar'));
     let flag = false;
@@ -347,3 +362,4 @@ function addTovar(tovar){
     }
     localStorage.setItem('addTovar', JSON.stringify(basket));
 }
+*/
