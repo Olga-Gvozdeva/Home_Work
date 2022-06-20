@@ -640,9 +640,15 @@ a ~ ul{
     
 }
 
-/*hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh*/
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
 
-/* popups */
 .lightbox,
 .calendarbox,
 .alertbox {
@@ -658,27 +664,24 @@ a ~ ul{
     width: 360px;
     height: 60px;
     margin: -46px auto auto -196px;
+    display: flex;
+    border: 1px solid;
+    justify-content: center;
+    align-items: center;
 }
 .calendarbox {
     width: 398px;
     margin: -215px auto auto -215px;
 }
-.lightbox button,
-.calendarbox button,
 .alertbox button {
     position: absolute;
-    top: 32px;
-    right: 32px;
-    color: white;
-    font-size: 64px;
-    line-height: 37px;
+    top: 5px;
+    right: 10px;
+    color: black;
     cursor: pointer;
+
 }
-.lightbox button:hover,
-.calendarbox button:hover,
-.alertbox button:hover {
-    color: yellow;
-}
+
 .calendarbox span {
     flex: none;
     height: 48px;
@@ -719,9 +722,6 @@ a ~ ul{
     border-color: transparent;
 }
 
-
-
-/* Оставляем */
 .table div {
     font-size: 24px;
     line-height: 48px;
@@ -816,6 +816,14 @@ legend + input {
     padding: 16px;
     background-color: rgb(248, 242, 234);
     cursor: pointer;
+    border: 1px solid;
 }
 
+.dp_header span:hover, .getter:hover{
+    background-color: rgb(248, 242, 234);
+    cursor: pointer;
+    }
+.dp_header span:active, .getter:active{
+    background-color: rgb(233, 170, 98);
+}
 

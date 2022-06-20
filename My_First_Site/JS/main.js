@@ -1,3 +1,7 @@
+const russMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+let gamma = [];
+
+
 function dropmenuClick(){
 let button = document.querySelector('.logo');
 let elem = document.querySelector('.dropdownMenu');
@@ -156,8 +160,6 @@ function basket(){
     }
 }
 
-let gamma = [];
-
 function gataka(){
 
 
@@ -193,7 +195,7 @@ function writeTable() {
         sum += (item.quantity * item.price);
         hlpstr += '<div class="tr"><div class="id" id="tovar_' + item.art + '"></div><div class="name">' + item.name + '</div><div class="price">' + item.price + '</div><div class="quantity"><button type="button">&minus;</button><span class="number">' + item.quantity + '</span><button type="button">&plus;</button></div><div class="summa">' + (item.quantity * item.price) + '</div><div class="delete"><button type="button">&times;</button></div></div>';
     }
-    hlpstr += '<div class="tr bottom"><div class="text">Итого:</div><div class="itog">' + sum + '</div></div>';
+    hlpstr += '<div class="tr bottom"><div class="text">Total:</div><div class="itog">' + sum + '</div></div>';
     tab.html(hlpstr);
 }
 
@@ -210,8 +212,6 @@ function removeTovar(id) {
     }
     return false;
 }
-
-/*
 
 function formValidate(form) {
     let name = $('#name').val();
@@ -252,21 +252,26 @@ function formValidate(form) {
     });
 }
 
-//ooooooooooooooooooooooooooooooooooooooooo
-
 function makeAlert(response) {
-    let hlpstr = '<div class="alertbox"><button type="button">&times;</button><p>Ваш заказ оформлен под номером ' + response.id + '.</p></div>';
+    let hlpstr = '<div class="alertbox"><button type="button">&#11198;</button><p>Ваш заказ оформлен под номером ' + response.id + '.</p></div>';
     $('body').append('<div class="screen"></div>');
     $('body').append(hlpstr);
     $('.alertbox button, .screen').click(function(){
         $('.alertbox').animate({opacity:0}, 500, function(){
+            localStorage.clear();
             location.reload(true);
         });
     });
     $('.alertbox').animate({opacity:1}, 500);
 }
 
-//oooooooooooooooooooooooooooooooooooooooooooooooooooo
+function addChar(c) {
+    c += '';
+    if (c.length < 2) {
+        c = '0' + c;
+    }
+    return c;
+}
 
 function makeCalendar(fieldDate) {
     let hlpdate = new Date();
@@ -280,7 +285,7 @@ function makeCalendar(fieldDate) {
     curmonth = hlpdate.getMonth();
     curday = hlpdate.getDate();
 
-    /*
+/*
     if (fieldDate.match(/^\d{2}\-\d{2}\-\d{4}$/)) {
         [curday, curmonth, curyear] = fieldDate.split('-');
         curmonth--;
@@ -290,14 +295,14 @@ function makeCalendar(fieldDate) {
             curday = now.getDate();
         }
     }
-    
+  */  
    
     hlpdate = new Date(curyear, curmonth);
     let prevdays = ((hlpdate.getDay() + 6) % 7); // пн - 0, вт - 1 ... сб - 5, вс - 6
     hlpdate = new Date(curyear, curmonth + 1, 0);
     let lastday = hlpdate.getDate() + prevdays; // последний день месяца + дни до начала месяца
     let weeks = Math.ceil(lastday / 7);
-    let hlpstr = '<div class="dp_header"><span class="bigprev"><<</span><span class="prev"><</span><strong>' + russMonth[curmonth] + ' ' + curyear + '</strong><span class="next">></span><span class="bignext">>></span></div>';
+    let hlpstr = '<div class="dp_header"><span class="bigprev">&#10232;</span><span class="prev">&#10229;</span><strong>' + russMonth[curmonth] + ' ' + curyear + '</strong><span class="next">&#10230;</span><span class="bignext">&#10233;</span></div>';
     hlpstr += '<div class="dp_grid"><span class="headday">Пн</span><span class="headday">Вт</span><span class="headday">Ср</span><span class="headday">Чт</span><span class="headday">Пт</span><span class="headday holiday">Сб</span><span class="headday holiday">Вс</span>';
     for (let i = 0; i < weeks * 7; i++) {
         if ((i >= prevdays) && (i < lastday)) {
@@ -345,7 +350,3 @@ function getCalendar(fieldDate) {
     makeCalendar(fieldDate);
     $('.calendarbox').animate({opacity:1}, 500);
 }
-
-/*
-
-*/
