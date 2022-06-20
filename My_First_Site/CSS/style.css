@@ -116,6 +116,10 @@ header input[type='text']::placeholder{
 .basket{
     background-image: url(../Img/basket.png);
 }
+
+.basketClick{
+    background-image: url(../Img/basketclick.png);
+}
 .person{
     background-image: url(../Img/person.png);
     box-sizing: border-box;
@@ -567,7 +571,9 @@ h5 ~ div{
     display: inline-flex;
     width: 200px;
     height: 250px;
-    background-image: url(../Img/odezda_vert1.jpg);
+    background-image: url(../Img/sveter.jpg);
+    background-size: 80%;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 

@@ -139,6 +139,7 @@ function hiperion(){
         let sossa = alzir[i];
     
         sossa.addEventListener('click', function(){
+
             let beta = [sossa.dataset.name, sossa.dataset.price];
             let keylocal = sossa.dataset.article;
             localStorage.setItem(keylocal, beta);
@@ -150,3 +151,24 @@ function hiperion(){
 
     document.addEventListener("DOMContentLoaded", hiperion)
 
+
+function basket(){
+        let alzir = document.querySelectorAll('.click');
+        let basket = document.querySelector('.basket');
+        let isResizeble = false;
+        
+        if(!isResizeble) {
+        for(let i = 0; i < alzir.length; i++){
+            let sossa = alzir[i];
+            sossa.addEventListener('click', function(){
+    
+            basket.classList.toggle('basketClick');
+
+            isResizeble = true;
+    
+            }
+        )};
+    }
+}
+
+document.addEventListener("DOMContentLoaded", basket);
