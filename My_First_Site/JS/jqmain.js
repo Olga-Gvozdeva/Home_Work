@@ -17,11 +17,7 @@ basket();
 //getCalendar(fieldDate);
 
 //removeTovar(id);
-
-});
-
-let gamma = [];
-
+/*
 $('.item').click(function(){
     if ($(this).data('href')) location.assign($(this).data('href'));
 })
@@ -46,18 +42,16 @@ if ($('.product').length) {
         $('.bigimage img').attr('src', attr);
     });
 }
+*/
 
 if ($('.table').length) {
-    getCurrency1();
-    getCurrency2();
-    getCurrency3();
     writeTable();
     $(document).on('click', '.quantity button:first-child', function(){
         let id = $(this).parents('.tr').find('.id').prop('id').slice(6);
-        for (item of tovardata) {
-            if (item.id == id) {
-                item.qty--;
-                if (item.qty <= 0) removeTovar(id);
+        for (item of gamma) {
+            if (item.art == id) {
+                item.quantity--;
+                if (item.quantity <= 0) removeTovar(id);
                 break;
             }
         }
@@ -65,9 +59,9 @@ if ($('.table').length) {
     });
     $(document).on('click', '.quantity button:last-child', function(){
         let id = $(this).parents('.tr').find('.id').prop('id').slice(6);
-        for (item of tovardata) {
-            if (item.id == id) {
-                item.qty++;
+        for (item of gamma) {
+            if (item.art == id) {
+                item.quantity++;
                 break;
             }
         }
@@ -77,6 +71,13 @@ if ($('.table').length) {
         let id = $(this).parents('.tr').find('.id').prop('id').slice(6);
         if (removeTovar(id)) writeTable();
     });
+
+
+
+
+
+
+    
     $('.form form').submit(function(e){
         e.preventDefault();
         formValidate(this);
@@ -85,3 +86,5 @@ if ($('.table').length) {
         getCalendar($('#date').val());
     });
 }
+
+});
