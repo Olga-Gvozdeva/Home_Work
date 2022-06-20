@@ -132,6 +132,21 @@ document.addEventListener("DOMContentLoaded",function(){
     slidebar('.previous2','.next2','.item2');
 });
 
-/*jggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg*/
+function hiperion(){
+    let alzir = document.querySelectorAll('.click');
+    
+    for(let i = 0; i < alzir.length; i++){
+        let sossa = alzir[i];
+    
+        sossa.addEventListener('click', function(){
+            let beta = [sossa.dataset.name, sossa.dataset.price];
+            let keylocal = sossa.dataset.article;
+            localStorage.setItem(keylocal, beta);
+    
+        })
+    
+        };
+        }
 
+    document.addEventListener("DOMContentLoaded", hiperion)
 
