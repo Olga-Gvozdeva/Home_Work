@@ -215,6 +215,18 @@ function makeAlert(response) {
     $('.alertbox').animate({opacity:1}, 500);
 }
 
+function alertitemadd() {
+    let hlpstr = '<div class="alertbox"><button type="button">&#11198;</button><p>Product added successfully</p></div>';
+    $('body').append('<div class="screen"></div>');
+    $('body').append(hlpstr);
+    $('.alertbox button, .screen').click(function(){
+        $('.alertbox').animate({opacity:0}, 500, function(){
+            location.reload(true);
+        });
+    });
+    $('.alertbox').animate({opacity:1}, 500);
+}
+
 function addChar(c) {
     c += '';
     if (c.length < 2) {
@@ -327,9 +339,10 @@ function lightbox(aim) {
         let beta = [aim.dataset.name, aim.dataset.price];
         let keylocal = aim.dataset.article;
         localStorage.setItem(keylocal, beta);
+        alertitemadd();
     });
 
-    $('.lightbox .closelightbox, .screen').click(function(){
+    $('.lightbox .closelightbox, .lightbox .click, .screen').click(function(){
         $('.lightbox').animate({opacity:0}, 500, function(){
             $('.lightbox').remove();
             $('.screen').remove();
