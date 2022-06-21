@@ -654,10 +654,16 @@ a ~ ul{
 }
 
 .lightbox button{
-    width: 50px;
+    width: 60px;
     height: 50px;
     border: 2px solid grey;
-    border-radius: 50%;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.lightbox button:active{
+    background-color: black;
+    color: #fff;
 }
 
 .calendarbox span {
