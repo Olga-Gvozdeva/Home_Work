@@ -6,8 +6,11 @@ displaySize();
 gataka();
 writeTable();
 
-//slidebar('.previous','.next','.item');
-//slidebar('.previous2','.next2','.item2');
+if($('.previous').length) slidebar('.previous','.next','.item');
+if($('.previous2').length) slidebar('.previous2','.next2','.item2');
+
+if($('.aboutDelivery').length) accStore('.aboutDelivery','.textDelivery');
+if($('.aboutReturns').length) accStore('.aboutReturns','.textReturns');
 
 
 if ($('.table').length) {

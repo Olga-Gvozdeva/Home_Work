@@ -104,4 +104,8 @@ h2, .lightboxh2{
     width: 0;
 }
 
+.mainShop, .secondShop{
+    flex-direction: column;
+}
+
 }

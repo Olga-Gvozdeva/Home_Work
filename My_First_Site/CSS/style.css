@@ -304,8 +304,8 @@ main{
  }
 
  .store_content{
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: minmax(400px, 500px)max-content max-content;
+    grid-template-columns: minmax(530px, 600px) 1fr;
+    grid-template-rows: max-content max-content max-content;
     /*justify-items: end;*/
     grid-template-areas: 
     "sh mp"

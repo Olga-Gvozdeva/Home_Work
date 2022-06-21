@@ -39,7 +39,7 @@
                         <a href="products.html #shoes">Shoes</a>
                         <a href="products.html #accessories">Accessories</a>
                     </nav>
-                <div class="shops">
+                <div class="shops" id="contacts">
                    
                     <div class="mainShop">
                        
@@ -97,10 +97,10 @@
                 </div>
 
                 <div class="mapShops">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42509.342613616886!2d16.31415394479174!3d48.248324526347695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07afd745d745%3A0xff51c4cec0cc90bb!2z0JTRkdCx0LvQuNC90LMsINCS0LXQvdCwLCDQkNCy0YHRgtGA0LjRjw!5e0!3m2!1sru!2sru!4v1655561608075!5m2!1sru!2sru" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7f083105bbef1ea8f496710df76107f5b4e1033deece7cc6996d3ff3360667ad&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
 
-                <div class="delivery">
+                <div class="delivery" id="delivery">
                     <h3 class="aboutDelivery">About Delivery</h3>
                     <p class="textDelivery">
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
@@ -113,59 +113,42 @@
                 </div>
             </div>
               </main>
-          <footer>
-            <section>
-              <div class="footer_content">
-                  <nav class="container help">
-                      <h3>Help</h3>
-                      <a href="#">Contacts</a>
-                      <a href="#">Delivery & returns</a>
-                  </nav>
-                  <nav class="container shop">
-                      <h3>Shop</h3>
-                      <a href="#">New arrivals</a>
-                      <a href="#">Sales</a>
-                  </nav>
-                  <nav class="container touch">
-                      <h3>Get in touch</h3>
-                      <p class="call">(405) 555-0128</p>
-                      <p class="email">hello@createx.com</p>
-                      <div class="media">
-                        <a href="#" class="fb"></a>
-                        <a href="#" class="inst"></a>
-                        <a href="#" class="youtube"></a>
-                      </div>
-                  </nav>
-              </div>
-            </section>
-            <hr>
-            <section>
-                <div class="footerBottom">
-                    <p class="rightReserved"><span class="fst">All rights reserved. Made with</span><span class="scd">by OlgaGvozdeva<span></p>
-                    <a class="goTop" href="#">Go to top</a>
-                </div>
-            </section>
-          </footer>
+              <footer>
+                <section>
+                  <div class="footer_content">
+                    <nav class="container help">
+                        <h3>Help</h3>
+                        <a href="store.html #contacts">Contacts</a>
+                        <a href="store.html #delivery">Delivery & returns</a>
+                    </nav>
+                    <nav class="container shop">
+                        <h3>Shop</h3>
+                        <a href="products.html #newIn">New arrivals</a>
+                        <a href="products.html #sales">Sales</a>
+                    </nav>
+                      <nav class="container touch">
+                          <h3>Get in touch</h3>
+                          <p class="call">(405) 555-0128</p>
+                          <p class="email">hello@createx.com</p>
+                          <div class="media">
+                            <a href="#" class="fb"></a>
+                            <a href="#" class="inst"></a>
+                            <a href="#" class="youtube"></a>
+                          </div>
+                      </nav>
+                  </div>
+                </section>
+                <section>
+                    <div class="footerBottom">
+                        <div class="rightReserved"><p class="fst">All rights reserved.</p>
+                            <p>Made with<span class="scd">by OlgaGvozdeva</span></p></div>
+                        <a class="goTop" href="#">Go to top</a>
+                    </div>
+                </section>
+              </footer>
 
 
         <script>
-
-function accStore(main, title){
-
-    let buttonClick = document.querySelector(main);
-    let titleText = document.querySelector(title);
-
-    buttonClick.addEventListener('click', function(){
-        titleText.classList.toggle('activeTitle');
-    })
-}
-
-document.addEventListener("DOMContentLoaded",function(){
-    accStore('.aboutDelivery','.textDelivery');
-    accStore('.aboutReturns','.textReturns');
-});
-
-
 
         </script>  
       </body>

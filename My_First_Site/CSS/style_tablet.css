@@ -83,4 +83,17 @@ h2{
     width: 24px;
 }
 
+.store_content{
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content minmax(400px, 500px) max-content max-content;
+    /*justify-items: end;*/
+    grid-template-areas: 
+    "sh"
+    "mp"
+    "dd"
+    "rt";
+    gap: 20px;
+    
+}
+
 }

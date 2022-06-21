@@ -339,10 +339,6 @@ function lightbox(aim) {
 }
 
 
-
-
-
-
 function lightboxperson(aim) {
 
     let w = document.documentElement.clientWidth - 64;
@@ -365,4 +361,14 @@ function lightboxperson(aim) {
         });
     });
     $('.lightbox').animate({opacity:1}, 500);
+}
+
+function accStore(main, title){
+
+    let buttonClick = document.querySelector(main);
+    let titleText = document.querySelector(title);
+
+    buttonClick.addEventListener('click', function(){
+        titleText.classList.toggle('activeTitle');
+    })
 }
