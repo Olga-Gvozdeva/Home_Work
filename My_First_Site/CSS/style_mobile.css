@@ -108,4 +108,60 @@ h2, .lightboxh2{
     flex-direction: column;
 }
 
+.alertbox {
+    width: 360px;
+    height: 60px;
+    margin: -46px auto auto -196px;
+}
+.calendarbox {
+    width: 300px;
+    margin: -215px auto auto -166px;
+}
+
+.calendarbox span {
+    flex: none;
+    height: 35px;
+    width: 35px;
+}
+
+.calendarbox .dp_grid {
+    gap: 8px;
+    grid-template-columns: repeat(7, 35px);
+}
+
+.calendarbox .dp_header {
+    width: 295px;
+
+}
+
+.form{
+    width: max-content;
+}
+.table{
+    width: max-content;
+}
+
+.tr{
+    align-items: center;
+}
+
+.basket_content{
+    justify-items: center;
+}
+
+.dp_grid span{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dp_header span{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 }
