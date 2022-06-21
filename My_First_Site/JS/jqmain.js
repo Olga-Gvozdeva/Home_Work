@@ -12,6 +12,19 @@ if($('.previous2').length) slidebar('.previous2','.next2','.item2');
 if($('.aboutDelivery').length) accStore('.aboutDelivery','.textDelivery');
 if($('.aboutReturns').length) accStore('.aboutReturns','.textReturns');
 
+$('.totop').click(function(){
+    $('html').animate({scrollTop: 0}, 1000);
+});
+
+$(window).scroll(function(){
+
+    if ($(window).scrollTop() > 150){
+        $('.totop').removeClass('hiddentop');
+    }else{
+        $('.totop').addClass('hiddentop');
+    }
+});
+$(window).trigger('scroll');
 
 if ($('.table').length) {
     writeTable();

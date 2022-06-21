@@ -109,9 +109,8 @@ h2, .lightboxh2{
 }
 
 .alertbox {
-    width: 360px;
-    height: 60px;
-    margin: -46px auto auto -196px;
+    width: 260px;
+    margin: -46px auto auto -150px;
 }
 .calendarbox {
     width: 300px;
