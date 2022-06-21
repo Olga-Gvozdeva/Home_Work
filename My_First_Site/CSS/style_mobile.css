@@ -68,7 +68,7 @@ footer{
     font-size: 14px;
 }
 
-h2{
+h2, .lightboxh2{
     font-size: 1em;
 }
 
@@ -93,5 +93,15 @@ h2{
     display: none;
 }
 
+.lightboxP{
+    font-size: 14px;
+}
+
+.lightbox{
+    overflow-y: scroll;
+}
+.lightbox::-webkit-scrollbar{
+    width: 0;
+}
 
 }

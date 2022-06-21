@@ -1,17 +1,13 @@
 $(function(){
 
 accordeon();
-popUpOpen();
 dropmenuClick();
 displaySize();
-hiperion();
 gataka();
 writeTable();
 
 //slidebar('.previous','.next','.item');
 //slidebar('.previous2','.next2','.item2');
-
-basket();
 
 
 if ($('.table').length) {
@@ -52,5 +48,13 @@ if ($('.table').length) {
     });
 
 }
+
+$('.item').click(function(){
+    lightbox(this);
+});
+
+$('.person').click(function(){
+    lightboxperson(this);
+});
 
 });

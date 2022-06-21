@@ -1,5 +1,6 @@
 const russMonth = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 let gamma = [];
+let basket = document.querySelector('.basket');
 
 
 function dropmenuClick(){
@@ -63,21 +64,6 @@ let f_windowWidth = function (width) {
 
 };
 
-
-function popUpOpen(){
-    let persons = document.querySelector('.person');
-    let popupFade = document.querySelector('.popupFade');
-
-    persons.addEventListener('click', function(){
-        popupFade.classList.toggle('fadeOpen')
-    });
-
-    let closepopUp = document.querySelector('.popupClose');
-    closepopUp.addEventListener('click', function(){
-        popupFade.classList.remove('fadeOpen')
-    })
-}
-
 function accordeon(){
     let beta = document.querySelectorAll('.sub');
     for(let elem of beta){
@@ -124,42 +110,6 @@ function slidebar(perem1, perem2, perem3){
     }
 }
 
-function hiperion(){
-    let alzir = document.querySelectorAll('.click');
-    
-    for(let i = 0; i < alzir.length; i++){
-        let sossa = alzir[i];
-    
-        sossa.addEventListener('click', function(){
-
-            let beta = [sossa.dataset.name, sossa.dataset.price];
-            let keylocal = sossa.dataset.article;
-            localStorage.setItem(keylocal, beta);
-    
-        })
-    
-    };
-}
-
-function basket(){
-        let alzir = document.querySelectorAll('.click');
-        let basket = document.querySelector('.basket');
-        let isResizeble = false;
-        
-        if(!isResizeble) {
-        for(let i = 0; i < alzir.length; i++){
-            let sossa = alzir[i];
-            sossa.addEventListener('click', function(){
-    
-            basket.classList.toggle('basketClick');
-
-            isResizeble = true;
-    
-            }
-        )};
-    }
-}
-
 function gataka(){
 
 
@@ -187,7 +137,7 @@ function writeTable() {
         $('.nullBasket').after('<div class="empty">Add items to Сart</div>');
         return;
     }
-    
+
     let tab = $('.table');
     let hlpstr = '<div class="tr top"><div class="id"></div><div class="name">Product</div><div class="price">Price</div><div class="quantity">Quantity</div><div class="summa">Total</div><div class="delete"></div></div>';
     let sum = 0;
@@ -349,4 +299,70 @@ function getCalendar(fieldDate) {
     });
     makeCalendar(fieldDate);
     $('.calendarbox').animate({opacity:1}, 500);
+}
+
+function lightbox(aim) {
+
+    let bg = $(aim).css('background-image');
+    bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+
+    let w = document.documentElement.clientWidth - 64;
+    let h = document.documentElement.clientHeight - 64;
+    let sides = aim.clientWidth / aim.clientHeight;
+    if (w > sides * h) {
+        w = sides * h;
+    } else if (w < sides * h) {
+        h = Math.floor(w / sides);
+    }
+    let topfix = h / 2 + 16;
+    let leftfix = w / 2 + 16;
+
+    let nameItem = aim.dataset.name;
+    let infoItem = aim.dataset.info;
+    hlpstr = '<div class="lightbox" style="margin-left:-' + leftfix + 'px;margin-top:-' + topfix + 'px; width:' + w + 'px;height:' + h + 'px;"><div class="lightinfo"><h2 class="lightboxh2">Products name: ' + nameItem + '</h2><img src="' + bg + '" style="width: 50%; height:' + h/2 + 'px; float: left; margin-right: 20px;"><p class="lightboxP">About item: ' + infoItem + '</p></div><div class="buttonlight"><button class="click">BUY</button><button type="button" class="closelightbox">CLOSE</button></div></div>';
+    $('body').append('<div class="screen"></div>');
+    $('body').append(hlpstr);
+
+    $('.click').click(function(){
+        let beta = [aim.dataset.name, aim.dataset.price];
+        let keylocal = aim.dataset.article;
+        localStorage.setItem(keylocal, beta);
+    });
+
+    $('.lightbox .closelightbox, .screen').click(function(){
+        $('.lightbox').animate({opacity:0}, 500, function(){
+            $('.lightbox').remove();
+            $('.screen').remove();
+        });
+    });
+    $('.lightbox').animate({opacity:1}, 500);
+}
+
+
+
+
+
+
+function lightboxperson(aim) {
+
+    let w = document.documentElement.clientWidth - 64;
+    let h = document.documentElement.clientHeight - 64;
+    let sides = aim.clientWidth / aim.clientHeight;
+    if (w > sides * h) {
+        w = sides * h;
+    } else if (w < sides * h) {
+        h = Math.floor(w / sides);
+    }
+    let topfix = h / 2 + 16;
+    let leftfix = w / 2 + 16;
+    hlpstr = '<div class="lightbox" style="margin-left:-' + leftfix + 'px;margin-top:-' + topfix + 'px; width:' + w + 'px;height:' + h + 'px;"><button type="button">&times;</button><div class="personform"> </div></div>';
+    $('body').append('<div class="screen"></div>');
+    $('body').append(hlpstr);
+    $('.lightbox button, .screen').click(function(){
+        $('.lightbox').animate({opacity:0}, 500, function(){
+            $('.lightbox').remove();
+            $('.screen').remove();
+        });
+    });
+    $('.lightbox').animate({opacity:1}, 500);
 }

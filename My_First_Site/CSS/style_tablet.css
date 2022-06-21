@@ -14,11 +14,12 @@
     position: absolute;
     top: 70px;
     display: flex;
-    padding-left: 20px;
+    padding-left: 110px;
     justify-content: space-evenly;
     background-color: rgb(248, 242, 234);
     box-shadow: 8px 8px 6px -6px #b5af86;
     margin-left: -105px;
+    z-index: 100;
 }
 
 header .logo{

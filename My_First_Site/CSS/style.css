@@ -132,43 +132,6 @@ header input[type='text']::placeholder{
     height:24px;
 }
 
-.popupFade {
-	display: none;
-}
-
-.fadeOpen{
-    display: block;
-}
-.popupFade:before {
-	content: '';
-	background: #000;
-	position: fixed; 
-	left: 0;
-	top: 0;
-	width: 100%; 
-	height: 100%;
-	opacity: 0.7;
-	z-index: 9999;
-}
-.popUp {
-    width: 400px;
-    height: 600px;
-    position: fixed;
-    margin-left: -400px;
-	padding: 20px;	
-	background: #fff;
-	border: 1px solid orange;
-	border-radius: 4px; 
-	z-index: 99999;
-	opacity: 1;	
-}
-.popupClose {
-    flex: none;
-    right: 20px;
-	position: absolute;
-
-}
-
 .right_one, .right_two{
     position: relative;
 }
@@ -673,13 +636,28 @@ a ~ ul{
     width: 398px;
     margin: -215px auto auto -215px;
 }
-.alertbox button {
+
+.lightbox{
+    padding: 16px 25px;
+    text-align: justify;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+.alertbox button{
     position: absolute;
     top: 5px;
     right: 10px;
     color: black;
     cursor: pointer;
 
+}
+
+.lightbox button{
+    width: 50px;
+    height: 50px;
+    border: 2px solid grey;
+    border-radius: 50%;
 }
 
 .calendarbox span {
@@ -790,13 +768,14 @@ fieldset {
 legend {
     font-weight: bold;
 }
-input {
+.inputforma {
     display: block;
     border: 1px solid gray;
     padding: 16px;
     color: gray;
     height: 30px;
     width: 250px;
+    margin-top: 16px;
 }
 textarea {
     display: block;
@@ -825,5 +804,17 @@ legend + input {
     }
 .dp_header span:active, .getter:active{
     background-color: rgb(233, 170, 98);
+}
+
+.lightboxh2{
+    margin-bottom: 10px;
+}
+
+.buttonlight{
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
